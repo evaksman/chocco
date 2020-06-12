@@ -1,0 +1,9 @@
+@import url("./layout/normalize.css");
+@import url("./layout/base.css");
+
+@import url("./blocks/hero.css");
+@import url("./blocks/header.css");
+@import url("./blocks/menu.css");
+@import url("./blocks/logo.css");
+@import url("./blocks/contacts.css");
+@import url("./blocks/characteristics.css");

@@ -1,0 +1,26 @@
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__item {
+  margin-right: 55px;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+/* .menu__item_active .menu__link {
+  color: #dfb56d;
+} */
+
+.menu__link {
+  font-size: 14px;
+  text-decoration: none;
+  /* transition: color.3s; */
+}
+
+/* .menu__link:hover {
+  color: #dfb56d;
+} */
