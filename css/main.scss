@@ -1,8 +1,8 @@
-$containerWidth: 1100px;
+$containerWidth: 940px;
 $baseFontSize: 18px;
 
 //colors
-$blue: #86c3d7;
+$blue: #61c4d9;
 $darkGreen: #365a49;
 $grey: #666;
 
@@ -13,12 +13,15 @@ $grey: #666;
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
 
 //base style
-@import "base";
+@import "components/base";
 
 //components
-// @import url("./blocks/hero.css");
-// @import url("./blocks/header.css");
-// @import url("./blocks/menu.css");
-// @import url("./blocks/logo.css");
-// @import url("./blocks/contacts.css");
-// @import url("./blocks/characteristics.css");
+@import "components/hero";
+@import "components/header";
+@import "components/menu";
+@import "components/logo";
+@import "components/phone-number";
+@import "components/features";
+@import "components/feature";
+@import "components/btn";
+

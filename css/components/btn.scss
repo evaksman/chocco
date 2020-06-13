@@ -1,0 +1,31 @@
+.btn {
+  font-size: 19px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 22px 33px 19px 35px;
+  border-radius: 100px;
+  line-height: 1;
+
+  &_theme_light {
+    background-color: #fff;
+    color: $darkGreen;
+    transition: color, background-color .3s;
+
+    &:hover {
+      background-color: $darkGreen;
+      color: #fff;
+    }
+  }
+
+  &_theme_dark {
+    background-color: $darkGreen;
+    color: #fff;
+    transition: color, background-color .3s;
+
+    &:hover {
+      background-color: #fff;
+      color: $darkGreen;
+    }
+  }
+}

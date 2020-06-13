@@ -1,6 +1,13 @@
 .features {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: 48%;
+
+  &__item {
+    margin-right: 47px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }

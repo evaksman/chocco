@@ -9,7 +9,10 @@ body {
   /* сглаживание */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font: normal 12.676056338px "Alegreya Sans", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.42;
+  font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
   color: #666;
   position: relative;
 }
@@ -76,7 +79,7 @@ footer {
   overflow: hidden;
   /*чтобы не было горизонтального скролла*/
   width: 100%;
-  min-width: 1120px;
+  min-width: 960px;
   min-height: 100%;
 }
 
@@ -84,6 +87,152 @@ footer {
   flex: 1;
 } */
 .container {
-  width: 1100px;
+  width: 940px;
   margin: 0 auto;
+}
+
+.hero {
+  background: url("../../images/bg/leaf.png") right bottom no-repeat;
+  background-color: #61c4d9;
+  min-height: 650px;
+  height: 100vh;
+  margin-bottom: 168px;
+  color: #fff;
+  position: relative;
+}
+.hero:before {
+  content: url("../../images/decor/leaf.png");
+  position: absolute;
+  bottom: -50px;
+  left: 2%;
+}
+.hero:after {
+  content: url("../../images/decor/berries.png");
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+}
+.hero__container {
+  background: url("../../images/bg/chocolates.png") right center/50% auto no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 24px 0 45px;
+}
+.hero__text-content {
+  margin-bottom: 85px;
+  width: 38%;
+}
+.hero__title {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.hero__subtitle {
+  margin-bottom: 47px;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.header {
+  margin-bottom: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__item {
+  margin-right: 29px;
+}
+.menu__item:last-child {
+  margin-right: 0;
+}
+.menu__link {
+  text-decoration: none;
+  line-height: 30px;
+}
+/* .menu__item_active .menu__link {
+  color: #dfb56d;
+} */
+/* .menu__link:hover {
+  color: #dfb56d;
+} */
+.logo {
+  display: block;
+  margin-right: 10px;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.phone-number__icon-img {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+}
+.features__item {
+  margin-right: 47px;
+}
+.features__item:last-child {
+  margin-right: 0;
+}
+
+.feature {
+  display: flex;
+}
+.feature__icon {
+  min-width: 45px;
+  margin-right: 7px;
+}
+.feature__text {
+  font-size: 16px;
+  min-width: 65px;
+  line-height: 20px;
+}
+
+.btn {
+  font-size: 19px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 22px 33px 19px 35px;
+  border-radius: 100px;
+  line-height: 1;
+}
+.btn_theme_light {
+  background-color: #fff;
+  color: #365a49;
+  transition: color, background-color 0.3s;
+}
+.btn_theme_light:hover {
+  background-color: #365a49;
+  color: #fff;
+}
+.btn_theme_dark {
+  background-color: #365a49;
+  color: #fff;
+  transition: color, background-color 0.3s;
+}
+.btn_theme_dark:hover {
+  background-color: #fff;
+  color: #365a49;
 }

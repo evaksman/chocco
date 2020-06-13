@@ -1,18 +1,38 @@
 .hero {
-  background: url('../../images/bg/leaf.png') center right 350px no-repeat, url('../../images/bg/hero-bg.jpg') center top no-repeat #86c3d7;
+  background: url('../../images/bg/leaf.png') right bottom no-repeat;
+  background-color: $blue;
+  min-height: 650px;
+  height: 100vh;
   margin-bottom: 168px;
   color: #fff;
+  position: relative;
+
+  &:before {
+    content: url('../../images/decor/leaf.png');
+    position: absolute;
+    bottom: -50px;
+    left: 2%;
+  }
+
+  &:after {
+    content: url('../../images/decor/berries.png');
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+  }
  
   &__container {
+    background: url('../../images/bg/chocolates.png') right center / 50% auto no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 400px;
+    height: 100%;
+    padding: 24px 0 45px;
   }
 
   &__text-content {
-    margin-bottom: 20px;
-    width: 33%;
+    margin-bottom: 85px;
+    width: 38%;
   }
   
   &__title {
@@ -20,46 +40,12 @@
     font-weight: bold;
     line-height: 1.2em;
     margin-bottom: 5px;
-    font-family: "Alegreya Sans";
     text-transform: uppercase;
   }
 
   &__subtitle {
-    margin-bottom: 44px;
-    font-family: "Alegreya Sans";
+    margin-bottom: 47px;
     font-size: 21px;
-    line-height: 27px;
+    line-height: 26px;
   }
 }
-
-// .hero__container {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   min-height: 400px;
-// }
-
-// .hero__content {
-//   width: 38%;
-// }
-
-// .hero__text-content {
-//   margin-bottom: 20px;
-// }
-
-// .hero__title {
-//   font-size: 48px;
-//   font-weight: bold;
-//   line-height: 1.2em;
-//   margin-bottom: 21px;
-// }
-
-// .hero__subtitle {
-//   font-size: 18px;
-//   /* color: #dfb56d; */
-//   margin-bottom: 44px;
-// }
-
-/* .hero__characteristics {
-
-} */
