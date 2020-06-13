@@ -1,0 +1,39 @@
+.benefit {
+  text-align: center;
+
+  &__image {
+    margin-bottom: 30px;
+  }
+
+  &__image-wrapper {
+    display: inline-flex;
+    width: 126px;
+    height: 126px;
+    position: relative;
+    background: #f2f5f4;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__icon {
+    width: 75px;
+    height: 59px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    color: #000;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+
+  &__desc {
+    p{
+      font-weight: 300;
+    }
+  }
+}

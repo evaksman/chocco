@@ -1,0 +1,16 @@
+.benefits {
+  display: flex;
+
+  &__item {
+    flex: 1;
+    margin: 0 2%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -96,7 +96,6 @@ footer {
   background-color: #61c4d9;
   min-height: 650px;
   height: 100vh;
-  margin-bottom: 168px;
   color: #fff;
   position: relative;
 }
@@ -235,4 +234,77 @@ footer {
 .btn_theme_dark:hover {
   background-color: #fff;
   color: #365a49;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section__title {
+  color: #000;
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.headline {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.headline__title {
+  margin-bottom: 25px;
+}
+.headline__subtitle {
+  padding: 0 26%;
+}
+
+.benefits {
+  display: flex;
+}
+.benefits__item {
+  flex: 1;
+  margin: 0 2%;
+}
+.benefits__item:first-child {
+  margin-left: 0;
+}
+.benefits__item:last-child {
+  margin-right: 0;
+}
+
+.benefit {
+  text-align: center;
+}
+.benefit__image {
+  margin-bottom: 30px;
+}
+.benefit__image-wrapper {
+  display: inline-flex;
+  width: 126px;
+  height: 126px;
+  position: relative;
+  background: #f2f5f4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.benefit__icon {
+  width: 75px;
+  height: 59px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.benefit__title {
+  color: #000;
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.benefit__desc p {
+  font-weight: 300;
 }
