@@ -1,0 +1,24 @@
+$containerWidth: 1100px;
+$baseFontSize: 18px;
+
+//colors
+$blue: #86c3d7;
+$darkGreen: #365a49;
+$grey: #666;
+
+//normalize
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
+
+//base style
+@import "base";
+
+//components
+// @import url("./blocks/hero.css");
+// @import url("./blocks/header.css");
+// @import url("./blocks/menu.css");
+// @import url("./blocks/logo.css");
+// @import url("./blocks/contacts.css");
+// @import url("./blocks/characteristics.css");

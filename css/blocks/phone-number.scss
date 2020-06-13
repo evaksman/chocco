@@ -1,0 +1,45 @@
+.phone-number {
+  font-style: normal;
+  text-align: right;
+  display: flex;
+
+  // &_align_right {
+  //   margin-left: auto;
+  // }
+
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+
+  &:before {
+    content: "";
+    width: 12px;
+    height: 11px;
+    background: url(../../images/icons/phone.png) no-repeat center center;
+    display: inline-block;
+  }
+}
+
+// .contacts_align_right {
+//   margin-left: auto;
+// }
+
+// .contacts__phone {
+//   text-decoration: none;
+//   font-size: 24px;
+//   color: #fff;
+//   line-height: 30px;
+//   text-transform: uppercase;
+//   margin-bottom: 6px;
+// }
+
+// .contacts__phone:before {
+//   content: "";
+//   width: 12px;
+//   height: 11px;
+//   background: url(../../images/icons/phone.png) no-repeat center center;
+//   display: inline-block;
+// }

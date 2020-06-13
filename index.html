@@ -2,18 +2,19 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <meta name="viewport" content="width=1100, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/components/main.css">
   <title>CHOCCO - Главная</title>
 </head>
 <body>
   <div class="wrapper">
-    <div class="wrapper__content">
+    <div class="maincontent">
+
       <div class="hero">
         <div class="container hero__container">
           <header class="header">
-            <a href="#" class="logo">
-              <img src="#" alt="chocco logo" class="logo__image">
+            <a href="/" class="logo">
+              <img src="./images/logo.png" alt="chocco logo" class="logo__image">
             </a>
             <nav class="menu">
               <ul class="menu__list">
@@ -40,30 +41,38 @@
                 </li>
               </ul>
             </nav>
-            <address class="contacts contacts_align_right">
-              <a href="tel:+78009039090" class="contacts__phone">8 800 903 90 90</a>
-            </address>
+            <a href="tel:+78009039090" class="phone-number">8 800 903 90 90</a>
           </header>
-          <section class="hero__content">
-            <div class="hero__text-content">
-              <h1 class="hero__title">Натуральные шоколадные батончики</h1>
-              <h4 class="hero__subtitle">Наши батончики идеально подходят для тех, кто следит за своим здоровьем</h4>
-              <a href="#" class="btn btn_color_ginger">Заказать</a>
-            </div>
-            <ul class="characteristics">
-              <li class="characteristics__item characteristic">
-                <div class="characteristic__text">100% натуральный продукт</div>
+          <div class="hero__text-content">
+            <h1 class="hero__title">Натуральные шоколадные батончики</h1>
+            <h4 class="hero__subtitle">Наши батончики идеально подходят для тех, кто следит за своим здоровьем</h4>
+            <a href="#" class="btn btn_theme_light">Заказать</a>
+          </div>
+          <div class="hero__icons">
+            <ul class="features">
+              <li class="features__item feature">
+                <div class="feature__icon">
+                  <img src="./images/icons/leaf.svg" alt="leaf icon" class="feature__icon-img">
+                </div>
+                <div class="feature__text">100% натуральный продукт</div>
               </li>
-              <li class="characteristics__item characteristic">
-                <div class="characteristic__text">3-5 дней доставка по РФ</div>
+              <li class="features__item feature">
+                <div class="feature__icon">
+                  <img src="./images/icons/car.svg" alt="car icon" class="feature__icon-img">
+                </div>
+                <div class="feature__text">3-5 дней доставка по РФ</div>
               </li>
-              <li class="characteristics__item characteristic">
-                <div class="characteristic__text">Не портит фигуру</div>
+              <li class="features__item feature">
+                <div class="feature__icon">
+                  <img src="./images/icons/tape.svg" alt="tape icon" class="feature__icon-img">
+                </div>
+                <div class="feature__text">Не портит фигуру</div>
               </li>
             </ul>
-          </section>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </body>

@@ -1,0 +1,65 @@
+.hero {
+  background: url('../../images/bg/leaf.png') center right 350px no-repeat, url('../../images/bg/hero-bg.jpg') center top no-repeat #86c3d7;
+  margin-bottom: 168px;
+  color: #fff;
+ 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+  }
+
+  &__text-content {
+    margin-bottom: 20px;
+    width: 33%;
+  }
+  
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+    font-family: "Alegreya Sans";
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    margin-bottom: 44px;
+    font-family: "Alegreya Sans";
+    font-size: 21px;
+    line-height: 27px;
+  }
+}
+
+// .hero__container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   min-height: 400px;
+// }
+
+// .hero__content {
+//   width: 38%;
+// }
+
+// .hero__text-content {
+//   margin-bottom: 20px;
+// }
+
+// .hero__title {
+//   font-size: 48px;
+//   font-weight: bold;
+//   line-height: 1.2em;
+//   margin-bottom: 21px;
+// }
+
+// .hero__subtitle {
+//   font-size: 18px;
+//   /* color: #dfb56d; */
+//   margin-bottom: 44px;
+// }
+
+/* .hero__characteristics {
+
+} */

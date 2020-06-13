@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap");
+html, body {
+  height: 100%;
+}
+
+body {
+  /* сглаживание */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: normal 12.676056338px "Alegreya Sans", Arial, Helvetica, sans-serif;
+  color: #666;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  /*будет наследоваться от родительского блока*/
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+table {
+  /*чтобы границы ячеек сливались*/
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /*меняет алгоритм расчета ширины и высоты элемента, теперь включает поля и границы, но не отступы*/
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  /*чтобы не было горизонтального скролла*/
+  width: 100%;
+  min-width: 1120px;
+  min-height: 100%;
+}
+
+/* .wrapper__content {
+  flex: 1;
+} */
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
