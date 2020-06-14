@@ -15,6 +15,7 @@ body {
   font-weight: normal;
   color: #666;
   position: relative;
+  font-display: block;
 }
 
 a {
@@ -151,6 +152,10 @@ footer {
 }
 .menu__item {
   margin-right: 29px;
+  transition: text-shadow 0.3s;
+}
+.menu__item_active {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .menu__item:last-child {
   margin-right: 0;
@@ -158,7 +163,12 @@ footer {
 .menu__link {
   text-decoration: none;
   line-height: 30px;
+  transition: text-shadow 0.3s;
 }
+.menu__link:hover {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 /* .menu__item_active .menu__link {
   color: #dfb56d;
 } */
@@ -177,6 +187,10 @@ footer {
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+  transition: text-shadow 0.3s;
+}
+.phone-number:hover {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .phone-number__icon-img {
   width: 12px;
@@ -343,6 +357,10 @@ footer {
 .benefit__desc p {
   font-weight: 300;
   line-height: 22px;
+  margin-bottom: 20px;
+}
+.benefit__desc p:last-child {
+  margin-bottom: 0;
 }
 
 .benefits-section {
@@ -420,6 +438,10 @@ footer {
 }
 .reviews__text p {
   line-height: 22px;
+  margin-bottom: 20px;
+}
+.reviews__text p:last-child {
+  margin-bottom: 0;
 }
 .reviews__author {
   color: #000;
@@ -558,6 +580,45 @@ footer {
   height: 14px;
   background: #365a49;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.map-section {
+  position: relative;
+  background: url("../../images/bg/map.png") center center no-repeat;
+  background-size: cover;
+}
+
+.fixed-menu {
+  position: fixed;
+  top: 20%;
+  right: 3%;
+  z-index: 100;
+}
+.fixed-menu__item {
+  margin-bottom: 5px;
+}
+.fixed-menu__item_active .fixed-menu__link {
+  border-color: #fff;
+}
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+}
+.fixed-menu__link:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
   position: absolute;
   top: 50%;
   left: 50%;

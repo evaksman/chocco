@@ -6,6 +6,11 @@ $blue: #61c4d9;
 $darkGreen: #365a49;
 $grey: #666;
 
+//z-indexes
+$z-fixed-menu: 100;
+$z-review-leaf: 1;
+$z-review-berries: 2;
+
 //normalize
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
 
@@ -35,4 +40,6 @@ $grey: #666;
 @import "components/order-section";
 @import "components/form";
 @import "components/radio";
+@import "components/map-section";
+@import "components/fixed-menu";
 

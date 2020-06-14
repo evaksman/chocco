@@ -5,10 +5,11 @@
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
+  transition: text-shadow .3s;
 
-  // &_align_right {
-  //   margin-left: auto;
-  // }
+  &:hover {    
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 
   &__icon-img {
     width: 12px;
