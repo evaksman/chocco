@@ -31,6 +31,7 @@
     padding: 18px 11px;
     color: #000;
     font-family: "Open Sans";
+    // transition: border-color .3s;
 
     &:focus {
       outline: none;
@@ -50,5 +51,14 @@
   &__controls {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &__btn {
+    // transition: box-shadow .3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #dee2bd;
+    }
   }
 }
