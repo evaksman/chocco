@@ -94,7 +94,7 @@ footer {
 }
 
 .hero {
-  background: url("../../images/bg/leaf.png") right bottom no-repeat;
+  background: url("../../images/decor/big-leaf.png") right bottom no-repeat;
   background-color: #61c4d9;
   min-height: 650px;
   height: 100vh;
@@ -114,7 +114,7 @@ footer {
   right: 0;
 }
 .hero__container {
-  background: url("../../images/bg/chocolates.png") right center/50% auto no-repeat;
+  background: url("../../images/decor/chocolates.png") right center/50% auto no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
