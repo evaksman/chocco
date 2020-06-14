@@ -1,0 +1,20 @@
+.order-section {
+  position: relative;
+  background: url("../../images/bg/pattern.png") center center no-repeat;
+  background-size: cover;
+  color: $darkGreen;
+
+  &:before {
+    content: url("../../images/decor/single-berry.png");
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+  }
+
+  &:after {
+    content: url("../../images/decor/single-leaf.png");
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+  }
+}

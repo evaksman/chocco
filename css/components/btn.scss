@@ -6,6 +6,7 @@
   padding: 22px 33px 19px 35px;
   border-radius: 100px;
   line-height: 1;
+  border: none;
 
   &_theme_light {
     background-color: #fff;
@@ -25,6 +26,18 @@
 
     &:hover {
       background-color: #fff;
+      color: $darkGreen;
+    }
+  }
+
+  &_theme_transparent {
+    background-color: transparent;
+    color: #000;
+    text-transform: none;
+    font-weight: normal;
+    transition: color .3s;
+
+    &:hover {
       color: $darkGreen;
     }
   }

@@ -217,6 +217,7 @@ footer {
   padding: 22px 33px 19px 35px;
   border-radius: 100px;
   line-height: 1;
+  border: none;
 }
 .btn_theme_light {
   background-color: #fff;
@@ -234,6 +235,16 @@ footer {
 }
 .btn_theme_dark:hover {
   background-color: #fff;
+  color: #365a49;
+}
+.btn_theme_transparent {
+  background-color: transparent;
+  color: #000;
+  text-transform: none;
+  font-weight: normal;
+  transition: color 0.3s;
+}
+.btn_theme_transparent:hover {
   color: #365a49;
 }
 
@@ -254,6 +265,12 @@ footer {
 }
 .section__title_mb_small {
   margin-bottom: 30px;
+}
+.section__title_mb_medium {
+  margin-bottom: 40px;
+}
+.section__title_color_darkgreen {
+  color: #365a49;
 }
 
 .headline {
@@ -348,12 +365,14 @@ footer {
   position: absolute;
   bottom: -130px;
   left: 0;
+  z-index: 1;
 }
 .reviews-section:after {
   content: url("../../images/decor/multi-berries.png");
   position: absolute;
   bottom: -60px;
   left: 0;
+  z-index: 2;
 }
 
 .reviews__display {
@@ -438,4 +457,109 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.order-section {
+  position: relative;
+  background: url("../../images/bg/pattern.png") center center no-repeat;
+  background-size: cover;
+  color: #365a49;
+}
+.order-section:before {
+  content: url("../../images/decor/single-berry.png");
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+}
+.order-section:after {
+  content: url("../../images/decor/single-leaf.png");
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+}
+
+.form {
+  display: flex;
+}
+.form__col {
+  flex: 1;
+  margin-right: 20px;
+}
+.form__col:last-child {
+  margin-right: 0;
+}
+.form__row {
+  display: flex;
+  margin-bottom: 15px;
+}
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+}
+.form__block:last-child {
+  margin-right: 0;
+}
+.form__input {
+  width: 100%;
+  border: none;
+  border: 3px solid transparent;
+  padding: 18px 11px;
+  color: #000;
+  font-family: "Open Sans";
+}
+.form__input:focus {
+  outline: none;
+  border-color: #dee2bd;
+}
+.form__input_textarea {
+  height: 180px;
+  resize: none;
+}
+.form__controls-wrapper {
+  margin-bottom: 25px;
+}
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio {
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  margin-bottom: 11px;
+  margin-right: 20px;
+}
+.radio_checkbox .radio__visible {
+  border-radius: 0;
+}
+.radio_checkbox .radio__visible:before {
+  background: url("../../images/icons/tick.png") center center no-repeat;
+}
+.radio__elem {
+  display: none;
+}
+.radio__elem:checked ~ .radio__visible:before {
+  display: block;
+}
+.radio__visible {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 10px;
+}
+.radio__visible:before {
+  content: "";
+  display: none;
+  width: 14px;
+  height: 14px;
+  background: #365a49;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -7,6 +7,7 @@
     position: absolute;
     bottom: -130px;
     left: 0;
+    z-index: 1; //потом убрать
   }
 
   &:after {
@@ -14,5 +15,6 @@
     position: absolute;
     bottom: -60px;
     left: 0;
+    z-index: 2; // потом убрать
   }
 }

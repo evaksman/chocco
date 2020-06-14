@@ -16,5 +16,13 @@
     &_mb_small {
       margin-bottom: 30px;
     }
+
+    &_mb_medium {
+      margin-bottom: 40px;
+    }
+
+    &_color_darkgreen {
+      color: $darkGreen;
+    }
   }
 }
