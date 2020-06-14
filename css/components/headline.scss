@@ -1,12 +1,14 @@
 .headline {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 41px;
 
   &__title {
-    margin-bottom: 25px;
+    margin-bottom: 13px;
+    line-height: 1;
   }
 
   &__subtitle {
     padding: 0 26%;
+    line-height: 22px;
   }
 }

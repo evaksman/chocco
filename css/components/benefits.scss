@@ -3,14 +3,27 @@
 
   &__item {
     flex: 1;
-    margin: 0 2%;
+    padding: 0 2%;
+    position: relative;
+
+    &:before {
+      content: url("../../images/decor/separator.png");
+      position: absolute;
+      top: 50px;
+      right: 0;
+      transform: translateX(50%);
+    }
 
     &:first-child {
-      margin-left: 0;
+      padding-left: 0;
     }
 
     &:last-child {
-      margin-right: 0;
+      padding-right: 0;
+
+      &:before {
+        display: none;
+      }
     }
   }
 }
