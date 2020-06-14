@@ -12,5 +12,9 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 60px;
+
+    &_mb_small {
+      margin-bottom: 30px;
+    }
   }
 }

@@ -1,0 +1,18 @@
+.reviews-section {
+  position: relative;
+  background: url("../../images/decor/granola-and-berries.png") right top 10% no-repeat;
+
+  &:before {
+    content: url("../../images/decor/leftside-leaf.png");
+    position: absolute;
+    bottom: -130px;
+    left: 0;
+  }
+
+  &:after {
+    content: url("../../images/decor/multi-berries.png");
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+  }
+}
