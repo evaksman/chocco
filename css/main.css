@@ -111,7 +111,7 @@ footer {
   content: url("../../images/decor/berries.png");
   position: absolute;
   bottom: -50px;
-  right: 0;
+  right: 5%;
 }
 .hero__container {
   background: url("../../images/decor/chocolates.png") right center/50% auto no-repeat;
