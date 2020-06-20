@@ -2,6 +2,10 @@
   position: relative;
   background: url("../images/decor/granola-and-berries.png") right top 10% no-repeat;
 
+  @include tablets {
+    min-height: rem(975px);
+  }
+
   &:before {
     content: url("../images/decor/leftside-leaf.png");
     position: absolute;

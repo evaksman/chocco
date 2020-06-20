@@ -8,6 +8,14 @@
     overflow: hidden;
     position: relative;
 
+    @include tablets {
+      padding: rem(50px) rem(20px) rem(34px);
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      margin-bottom: rem(32px);
+    }
+
     &:before {
       content: "";
       display: block;
@@ -26,6 +34,13 @@
     width: rem(254px);
     height: rem(260px);
     margin-right: rem(20px);
+
+    @include tablets {
+      width: rem(130px);
+      height: rem(133px);
+      margin-right: 0;
+      margin-bottom: rem(28px);
+    }
   }
 
   &__avatar-img {
@@ -66,5 +81,13 @@
   &__switcher {
     display: flex;
     justify-content: center;
+
+    &-item {
+      margin-right: rem(25px);
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }

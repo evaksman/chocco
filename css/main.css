@@ -442,6 +442,12 @@ footer {
   position: relative;
   background: url("../images/decor/side-leaf.png") left top 57% no-repeat;
 }
+@media screen and (max-width: 768px) {
+  .benefits-section {
+    background-position: left top 5%;
+    min-height: 55.5555555556rem;
+  }
+}
 .benefits-section:before {
   content: url("../images/decor/bars-and-berries.png");
   position: absolute;
@@ -452,6 +458,11 @@ footer {
 .reviews-section {
   position: relative;
   background: url("../images/decor/granola-and-berries.png") right top 10% no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .reviews-section {
+    min-height: 54.1666666667rem;
+  }
 }
 .reviews-section:before {
   content: url("../images/decor/leftside-leaf.png");
@@ -477,6 +488,15 @@ footer {
   overflow: hidden;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .reviews__display {
+    padding: 2.7777777778rem 1.1111111111rem 1.8888888889rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1.7777777778rem;
+  }
+}
 .reviews__display:before {
   content: "";
   display: block;
@@ -493,6 +513,14 @@ footer {
   width: 14.1111111111rem;
   height: 14.4444444444rem;
   margin-right: 1.1111111111rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__avatar {
+    width: 7.2222222222rem;
+    height: 7.3888888889rem;
+    margin-right: 0;
+    margin-bottom: 1.5555555556rem;
+  }
 }
 .reviews__avatar-img {
   object-fit: cover;
@@ -526,6 +554,12 @@ footer {
   display: flex;
   justify-content: center;
 }
+.reviews__switcher-item {
+  margin-right: 1.3888888889rem;
+}
+.reviews__switcher-item:last-child {
+  margin-right: 0;
+}
 
 .interactive-avatar {
   width: 4.4444444444rem;
@@ -535,6 +569,12 @@ footer {
   overflow: hidden;
   position: relative;
   transition: border-color 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .interactive-avatar {
+    width: 3.3333333333rem;
+    height: 3.3333333333rem;
+  }
 }
 .interactive-avatar:hover {
   border-color: #365a49;
