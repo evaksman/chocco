@@ -10,5 +10,9 @@
   &__subtitle {
     padding: 0 26%;
     line-height: rem(22px);
+
+    @include phones {
+      padding: 0 3%;
+    }
   }
 }

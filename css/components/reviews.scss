@@ -82,11 +82,13 @@
     display: flex;
     justify-content: center;
 
-    &-item {
-      margin-right: rem(25px);
-  
-      &:last-child {
-        margin-right: 0;
+    @include tablets {
+      &-item {
+        margin-right: rem(25px);
+    
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

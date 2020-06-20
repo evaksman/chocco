@@ -6,6 +6,10 @@
     min-height: rem(975px);
   }
 
+  @include phones {
+    min-height: rem(800px);
+  }
+
   &:before {
     content: url("../images/decor/leftside-leaf.png");
     position: absolute;

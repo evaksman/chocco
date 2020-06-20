@@ -6,6 +6,10 @@
     padding: 0 18%;
   }
 
+  @include phones {
+    padding: 0;
+  }
+
   &__col {
     flex: 1;
     margin-right: rem(20px);
@@ -65,6 +69,10 @@
   &__controls {
     display: flex;
     flex-wrap: wrap;
+
+    @include phones {
+      justify-content: center;
+    }
   }
 
   &__btns {

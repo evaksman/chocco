@@ -8,6 +8,10 @@
     min-height: rem(960px);
   }
 
+  @include phones {
+    min-height: rem(768px);
+  }
+
   &:before, &:after {
     @include tablets {
       display: none;

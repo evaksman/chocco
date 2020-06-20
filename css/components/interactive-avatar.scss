@@ -12,6 +12,11 @@
     height: rem(60px);
   }
 
+  @include phones {
+    width: rem(55px);
+    height: rem(55px);
+  }
+
   &:hover {
     border-color: $darkGreen;
   }

@@ -7,11 +7,20 @@
     min-height: rem(1000px);
   }
 
+  @include phones {
+    background: none;
+    min-height: rem(707px);
+  }
+
   &:before {
     content: url("../images/decor/bars-and-berries.png");
     position: absolute;
     bottom: rem(-93px);
     left: 0;
+
+    @include phones {
+      display: none;
+    }
   }
 
 }

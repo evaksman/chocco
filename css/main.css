@@ -9,7 +9,7 @@ html {
     font-size: 17px;
   }
 }
-@media screen and (max-width: 480px) and (min-width: 320px) {
+@media screen and (max-width: 480px) {
   html {
     font-size: 16px;
   }
@@ -168,8 +168,18 @@ footer {
     text-align: center;
   }
   .hero__text-content:before {
-    content: url("../images/decor/hero-bars.png");
+    content: "";
+    width: 20.4444444444rem;
+    height: 20.3333333333rem;
+    background: url("../images/decor/hero-bars.png") center center/contain no-repeat;
     margin-bottom: 0.8888888889rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__text-content:before {
+    content: "";
+    width: 18.9444444444rem;
+    height: 19.1111111111rem;
   }
 }
 .hero__title {
@@ -179,6 +189,11 @@ footer {
   margin-bottom: 0.2777777778rem;
   text-transform: uppercase;
 }
+@media screen and (max-width: 480px) {
+  .hero__title {
+    line-height: 2rem;
+  }
+}
 .hero__subtitle {
   margin-bottom: 1.5555555556rem;
   font-size: 1.1666666667rem;
@@ -187,6 +202,11 @@ footer {
 @media screen and (max-width: 768px) {
   .hero__subtitle {
     padding: 0 26%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__subtitle {
+    padding: 0 15%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -374,14 +394,30 @@ footer {
   padding: 0 26%;
   line-height: 1.2222222222rem;
 }
+@media screen and (max-width: 480px) {
+  .headline__subtitle {
+    padding: 0 3%;
+  }
+}
 
 .benefits {
   display: flex;
+}
+@media screen and (max-width: 480px) {
+  .benefits {
+    flex-direction: column;
+  }
 }
 .benefits__item {
   flex: 1;
   padding: 0 2%;
   position: relative;
+}
+@media screen and (max-width: 480px) {
+  .benefits__item {
+    padding: 0 2%;
+    margin-bottom: 2.2222222222rem;
+  }
 }
 .benefits__item:before {
   content: url("../images/decor/separator.png");
@@ -389,6 +425,11 @@ footer {
   top: 2.7777777778rem;
   right: 0;
   transform: translateX(50%);
+}
+@media screen and (max-width: 480px) {
+  .benefits__item:before {
+    display: none;
+  }
 }
 .benefits__item:first-child {
   padding-left: 0;
@@ -403,8 +444,20 @@ footer {
 .benefit {
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  .benefit {
+    display: flex;
+    text-align: left;
+  }
+}
 .benefit__image {
   margin-bottom: 1.6666666667rem;
+}
+@media screen and (max-width: 480px) {
+  .benefit__image {
+    margin-bottom: 0;
+    margin-right: 1.1111111111rem;
+  }
 }
 .benefit__image-wrapper {
   display: inline-flex;
@@ -448,11 +501,22 @@ footer {
     min-height: 55.5555555556rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .benefits-section {
+    background: none;
+    min-height: 39.2777777778rem;
+  }
+}
 .benefits-section:before {
   content: url("../images/decor/bars-and-berries.png");
   position: absolute;
   bottom: -5.1666666667rem;
   left: 0;
+}
+@media screen and (max-width: 480px) {
+  .benefits-section:before {
+    display: none;
+  }
 }
 
 .reviews-section {
@@ -462,6 +526,11 @@ footer {
 @media screen and (max-width: 768px) {
   .reviews-section {
     min-height: 54.1666666667rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews-section {
+    min-height: 44.4444444444rem;
   }
 }
 .reviews-section:before {
@@ -554,11 +623,13 @@ footer {
   display: flex;
   justify-content: center;
 }
-.reviews__switcher-item {
-  margin-right: 1.3888888889rem;
-}
-.reviews__switcher-item:last-child {
-  margin-right: 0;
+@media screen and (max-width: 768px) {
+  .reviews__switcher-item {
+    margin-right: 1.3888888889rem;
+  }
+  .reviews__switcher-item:last-child {
+    margin-right: 0;
+  }
 }
 
 .interactive-avatar {
@@ -574,6 +645,12 @@ footer {
   .interactive-avatar {
     width: 3.3333333333rem;
     height: 3.3333333333rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .interactive-avatar {
+    width: 3.0555555556rem;
+    height: 3.0555555556rem;
   }
 }
 .interactive-avatar:hover {
@@ -607,6 +684,11 @@ footer {
     min-height: 53.3333333333rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .order-section {
+    min-height: 42.6666666667rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .order-section:before, .order-section:after {
     display: none;
@@ -632,6 +714,11 @@ footer {
   .form {
     flex-direction: column;
     padding: 0 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 0;
   }
 }
 .form__col {
@@ -685,6 +772,11 @@ footer {
 .form__controls {
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 480px) {
+  .form__controls {
+    justify-content: center;
+  }
 }
 .form__btns {
   display: flex;
