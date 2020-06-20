@@ -2,30 +2,30 @@
   &__display {
     background: url("../../images/decor/grey-berries.png") right top 5% no-repeat;
     background-color: #f8faf9;
-    padding: 50px 178px 34px 45px;
+    padding: rem(50px) rem(178px) rem(34px) rem(45px);
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
     overflow: hidden;
     position: relative;
 
     &:before {
       content: "";
       display: block;
-      width: 90px;
-      height: 90px;
+      width: rem(90px);
+      height: rem(90px);
       background: #fff;
       border-radius: 50%;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: -65px;
+      top: rem(-65px);
     }
   }
 
   &__avatar {
-    width: 254px;
-    height: 260px;
-    margin-right: 20px;
+    width: rem(254px);
+    height: rem(260px);
+    margin-right: rem(20px);
   }
 
   &__avatar-img {
@@ -40,17 +40,17 @@
 
   &__title {
     color: #000;
-    font-size: 30px;
+    font-size: rem(30px);
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
   }
 
   &__text {
-    margin-bottom: 25px;
+    margin-bottom: rem(25px);
 
     p {
-      line-height: 22px;
-      margin-bottom: 20px;
+      line-height: rem(22px);
+      margin-bottom: rem(20px);
 
       &:last-child {
         margin-bottom: 0;

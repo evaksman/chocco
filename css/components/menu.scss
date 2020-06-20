@@ -6,11 +6,11 @@
   }
   
   &__item {
-    margin-right: 29px;
+    margin-right: rem(29px);
     transition: text-shadow .3s;
 
     &_active {
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-shadow: 0 0 rem(10px) rgba(0, 0, 0, 0.2);
     }
 
     &:last-child {
@@ -20,11 +20,11 @@
 
   &__link {
     text-decoration: none;
-    line-height: 30px;
+    line-height: rem(30px);
     transition: text-shadow .3s;
 
     &:hover {    
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-shadow: 0 0 rem(10px) rgba(0, 0, 0, 0.2);
     }
   }
 }

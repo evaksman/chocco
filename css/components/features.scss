@@ -4,7 +4,7 @@
   width: 48%;
 
   &__item {
-    margin-right: 47px;
+    margin-right: rem(47px);
 
     &:last-child {
       margin-right: 0;
