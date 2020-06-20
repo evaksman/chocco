@@ -5,15 +5,24 @@
   font-size: rem(24px);
   line-height: rem(30px);
   text-transform: uppercase;
+
   transition: text-shadow .3s;
 
   &:hover {    
     text-shadow: 0 0 rem(10px) rgba(0, 0, 0, 0.2);
   }
 
-  &__icon-img {
-    width: rem(12px);
-    height: rem(12px);
-    margin-right: rem(6px);
+  &__icon {
+    flex-shrink: 0; // без сжатия
+
+    &-img {
+      width: rem(12px);
+      height: rem(12px);
+      margin-right: rem(6px);
+    }
+  }
+
+  &__text {
+    white-space: nowrap;
   }
 }

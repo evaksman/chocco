@@ -6,6 +6,17 @@
   color: #fff;
   position: relative;
 
+  @include tablets {
+    background-position: right top;
+    min-height: rem(1001px);
+  }
+
+  &:before, &:after {
+    @include tablets {
+      display: none;
+    }
+  }
+
   &:before {
     content: url('../../images/decor/leaf.png');
     position: absolute;
@@ -27,11 +38,33 @@
     justify-content: space-between;
     height: 100%;
     padding: rem(24px) 0 rem(45px);
+
+    @include tablets {
+      background: none;
+    }
   }
 
   &__text-content {
     margin-bottom: rem(85px);
     width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include tablets {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &:before {
+        content: url("../../images/decor/hero-bars.png");
+        margin-bottom: rem(16px);
+      }
+    }
   }
   
   &__title {
@@ -43,8 +76,18 @@
   }
 
   &__subtitle {
-    margin-bottom: rem(47px);
+    margin-bottom: rem(28px);
     font-size: rem(21px);
     line-height: rem(26px);
+
+    @include tablets {
+      padding: 0 26%;
+    }
+  }
+
+  &__icons {
+    @include tablets {
+      display: none;
+    }
   }
 }
