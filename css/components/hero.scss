@@ -1,5 +1,5 @@
 .hero {
-  background: url('../../images/decor/big-leaf.png') right bottom no-repeat;
+  background: url('../images/decor/big-leaf.png') right bottom no-repeat;
   background-color: $blue;
   min-height: rem(650px);
   height: 100vh;
@@ -18,21 +18,21 @@
   }
 
   &:before {
-    content: url('../../images/decor/leaf.png');
+    content: url('../images/decor/leaf.png');
     position: absolute;
     bottom: rem(-50px);
     left: 2%;
   }
 
   &:after {
-    content: url('../../images/decor/berries.png');
+    content: url('../images/decor/berries.png');
     position: absolute;
     bottom: rem(-50px);
     right: 5%;
   }
  
   &__container {
-    background: url('../../images/decor/chocolates.png') right center / 50% auto no-repeat;
+    background: url('../images/decor/chocolates.png') right center / 50% auto no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,7 +61,7 @@
       text-align: center;
 
       &:before {
-        content: url("../../images/decor/hero-bars.png");
+        content: url("../images/decor/hero-bars.png");
         margin-bottom: rem(16px);
       }
     }
