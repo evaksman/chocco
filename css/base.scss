@@ -76,7 +76,7 @@ footer {
   position: relative;
   overflow: hidden; /*чтобы не было горизонтального скролла*/
   width: 100%;
-  min-width: $containerWidth + 20px;
+  // min-width: $containerWidth + 20px;
   min-height: 100%;
   // display: flex;
   // flex-direction: column;
@@ -87,7 +87,9 @@ footer {
 } */
 
 .container {
-  width: $containerWidth;
+  // width: $containerWidth;
+  width: 95%; // чтобы был небольшой отступ по краям, без необходимости задания паддинга
+  max-width: $containerWidth;
   margin: 0 auto;
   position: relative;
 }

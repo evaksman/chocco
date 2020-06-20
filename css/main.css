@@ -80,7 +80,6 @@ footer {
   overflow: hidden;
   /*чтобы не было горизонтального скролла*/
   width: 100%;
-  min-width: 960px;
   min-height: 100%;
 }
 
@@ -88,7 +87,8 @@ footer {
   flex: 1;
 } */
 .container {
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   margin: 0 auto;
   position: relative;
 }
@@ -222,10 +222,11 @@ footer {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 22px 33px 19px 35px;
+  padding: 1.2222222222rem 1.8333333333rem 1.0555555556rem 1.9444444444rem;
   border-radius: 100px;
   line-height: 1;
   border: none;
+  cursor: pointer;
 }
 .btn_theme_light {
   background-color: #fff;
