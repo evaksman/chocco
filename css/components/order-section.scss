@@ -4,6 +4,16 @@
   background-size: cover;
   color: $darkGreen;
 
+  @include tablets {
+    min-height: rem(960px);
+  }
+
+  &:before, &:after {
+    @include tablets {
+      display: none;
+    }
+  }
+
   &:before {
     content: url("../images/decor/single-berry.png");
     position: absolute;
