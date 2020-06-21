@@ -12,6 +12,14 @@
     text-shadow: 0 0 rem(10px) rgba(0, 0, 0, 0.2);
   }
 
+  &_theme_green {
+    color: $darkGreen;
+  }
+
+  &_size_small {
+    font-size: rem(21px);
+  }
+
   &__icon {
     flex-shrink: 0; // без сжатия
 

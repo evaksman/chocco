@@ -120,6 +120,11 @@ footer {
     min-height: 55.6111111111rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .hero {
+    min-height: 44.4444444444rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero:before, .hero:after {
     display: none;
@@ -279,6 +284,12 @@ footer {
 }
 .phone-number:hover {
   text-shadow: 0 0 0.5555555556rem rgba(0, 0, 0, 0.2);
+}
+.phone-number_theme_green {
+  color: #365a49;
+}
+.phone-number_size_small {
+  font-size: 1.1666666667rem;
 }
 .phone-number__icon {
   flex-shrink: 0;
@@ -675,7 +686,7 @@ footer {
 
 .order-section {
   position: relative;
-  background: url("../images/bg/pattern.png") center center no-repeat;
+  background: url("../images/bg/pattern.png") center center/cover no-repeat;
   background-size: cover;
   color: #365a49;
 }
@@ -830,8 +841,85 @@ footer {
 
 .map-section {
   position: relative;
-  background: url("../images/bg/map.png") center center no-repeat;
-  background-size: cover;
+  background: url("../images/bg/map.png") center center/cover no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .map-section {
+    min-height: 35.4444444444rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .map-section {
+    min-height: 35.0555555556rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.3888888889rem 0;
+  background: #fff;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .footer__container {
+    flex-direction: column;
+  }
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.1666666667rem;
+  color: #000;
+}
+@media screen and (max-width: 480px) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.8333333333rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contacts__place {
+    margin-bottom: 0.5555555556rem;
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socials__item {
+  margin-right: 1.1111111111rem;
+}
+.socials__item:last-child {
+  margin-right: 0;
+}
+.socials__item_icon_vk .socials__link {
+  background: url("../images/icons/socials/vk.svg") center center no-repeat;
+}
+.socials__item_icon_fb .socials__link {
+  background: url("../images/icons/socials/fb.svg") center center no-repeat;
+}
+.socials__item_icon_insta .socials__link {
+  background: url("../images/icons/socials/in.svg") center center no-repeat;
+}
+.socials__item_icon_tw .socials__link {
+  background: url("../images/icons/socials/tw.svg") center center no-repeat;
+}
+.socials__link {
+  display: block;
+  text-decoration: none;
+  width: 1.1111111111rem;
+  height: 1.1111111111rem;
 }
 
 .fixed-menu {

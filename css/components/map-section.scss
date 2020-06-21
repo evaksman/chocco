@@ -1,5 +1,13 @@
 .map-section {
   position: relative;
-  background: url("../images/bg/map.png") center center no-repeat;
-  background-size: cover;
+  background: url("../images/bg/map.png") center center / cover no-repeat;
+
+    @include tablets {
+      min-height: rem(638px);
+    }
+  
+    @include phones {
+      min-height: rem(631px);
+    }
 }
+  
