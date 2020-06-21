@@ -9,7 +9,7 @@
   transition: text-shadow .3s;
 
   &:hover {    
-    text-shadow: 0 0 rem(10px) rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   &_theme_green {
@@ -27,6 +27,7 @@
       width: rem(12px);
       height: rem(12px);
       margin-right: rem(6px);
+      fill: #fff;
     }
   }
 

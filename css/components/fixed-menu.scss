@@ -9,7 +9,7 @@
   }
 
   &__item {
-    margin-bottom: rem(5px);
+    margin-bottom: 5px;
 
     &_active {
       .fixed-menu__link {
@@ -19,8 +19,8 @@
   }
 
   &__link {
-    width: rem(16px);
-    height: rem(16px);
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     border: 1px solid transparent;
     display: block;
@@ -29,8 +29,8 @@
     &:before {
       content: "";
       display: block;
-      width: rem(6px);
-      height: rem(6px);
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #fff;
       position: absolute;
