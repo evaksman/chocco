@@ -16,14 +16,19 @@
     }
 
     &:before {
-      content: url("../images/decor/separator.png");
+      // content: url("../images/decor/separator.png");
+      content: "";
       position: absolute;
       top: rem(50px);
       right: 0;
       transform: translateX(50%);
 
-      @include phones {
-        display: none;
+      // @include phones {
+      //   display: none;
+      // }
+
+      @media screen and (min-width: 768px) {
+        content: url("../images/decor/separator.png");
       }
     }
 
