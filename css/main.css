@@ -122,7 +122,9 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .hero {
-    min-height: 44.4444444444rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 @media screen and (max-width: 768px) {
@@ -523,7 +525,9 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .benefits-section {
-    min-height: 39.2777777778rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background: none;
   }
 }
@@ -550,7 +554,9 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .reviews-section {
-    min-height: 44.4444444444rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 .reviews-section:before {
@@ -706,7 +712,9 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .order-section {
-    min-height: 42.6666666667rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 @media screen and (max-width: 768px) {
@@ -874,7 +882,9 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .map-section {
-    min-height: 35.0555555556rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 

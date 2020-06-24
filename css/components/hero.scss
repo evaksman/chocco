@@ -12,7 +12,8 @@
   }
 
   @include phones {
-    min-height: rem(800px);
+    // min-height: rem(800px);
+    height: fit-content;
   }
 
   &:before, &:after {
