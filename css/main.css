@@ -125,38 +125,34 @@ footer {
     min-height: 44.4444444444rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .hero:before, .hero:after {
+    display: none;
+  }
+}
 .hero:before {
-  content: "";
+  content: url("../images/decor/leaf.png");
   position: absolute;
   bottom: -2.7777777778rem;
   left: 2%;
 }
-@media screen and (min-width: 768px) {
-  .hero:before {
-    content: url("../images/decor/leaf.png");
-  }
-}
 .hero:after {
-  content: "";
+  content: url("../images/decor/berries.png");
   position: absolute;
   bottom: -2.7777777778rem;
   right: 5%;
 }
-@media screen and (min-width: 768px) {
-  .hero:after {
-    content: url("../images/decor/berries.png");
-  }
-}
 .hero__container {
+  background: url("../images/decor/chocolates.png") right center/50% auto no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
   padding: 1.3333333333rem 0 2.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .hero__container {
-    background: url("../images/decor/chocolates.png") right center/50% auto no-repeat;
+    background: none;
   }
 }
 .hero__text-content {
@@ -444,15 +440,15 @@ footer {
   }
 }
 .benefits__item:before {
-  content: "";
+  content: url("../images/decor/separator.png");
   position: absolute;
   top: 2.7777777778rem;
   right: 0;
   transform: translateX(50%);
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .benefits__item:before {
-    content: url("../images/decor/separator.png");
+    display: none;
   }
 }
 .benefits__item:first-child {
@@ -518,6 +514,7 @@ footer {
 
 .benefits-section {
   position: relative;
+  background: url("../images/decor/side-leaf.png") left top 57% no-repeat;
 }
 @media screen and (max-width: 768px) {
   .benefits-section {
@@ -528,22 +525,18 @@ footer {
 @media screen and (max-width: 480px) {
   .benefits-section {
     min-height: 39.2777777778rem;
-  }
-}
-@media screen and (min-width: 480px) {
-  .benefits-section {
-    background: url("../images/decor/side-leaf.png") left top 57% no-repeat;
+    background: none;
   }
 }
 .benefits-section:before {
-  content: "";
+  content: url("../images/decor/bars-and-berries.png");
   position: absolute;
   bottom: -5.1666666667rem;
   left: 0;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .benefits-section:before {
-    content: url("../images/decor/bars-and-berries.png");
+    display: none;
   }
 }
 
