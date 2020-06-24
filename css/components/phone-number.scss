@@ -28,6 +28,10 @@
       height: rem(12px);
       margin-right: rem(6px);
       fill: #fff;
+
+      &_theme_green {
+        fill: $darkGreen;
+      }
     }
   }
 

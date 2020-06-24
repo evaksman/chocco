@@ -10,9 +10,16 @@
       border-radius: 0;
 
       &:before {
-        background: url("../images/icons/tick.png") center center no-repeat;
-          
-        // background: url("data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 54 54' style='fill:%23365A49;'path d='M10.3,0.6L10.3,0.6C9.6-0.2,8.4-0.2,7.7,0.5L4,4.2L3.2,3.4c-0.7-0.7-1.9-0.7-2.6,0L0.5,3.4c-0.7,0.7-0.7,1.9,0,2.6l2.2,2.2C3.1,8.6,3.6,8.7,4,8.7c0.5,0,0.9-0.2,1.3-0.5l5-5C11,2.5,11,1.3,10.3,0.6z'") no-repeat center center;
+        width: rem(11px);
+        height: rem(9px);
+        mask-image: url("../images/icons/checkmark.svg");
+        -webkit-mask-image: url("../images/icons/checkmark.svg");
+        background-color: $darkGreen;
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        // background: url("data:image/svg+xml;utf8,<svg fill='red'><use xlink:href='../../images/icons/checkmark.svg'></use></svg>") center center no-repeat;
+        // background: url("../images/icons/checkmark.svg") center center no-repeat;          
+        // background: url("data:image/svg+xml;utf8, %3Csvg style='fill:black;'%3E%3Cuse xlink:href='./images/icons/sprite.svg#checkmark'%3E%3C/use%3E%3C/svg%3E") center center no-repeat;
       }
     }
   }

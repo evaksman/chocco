@@ -304,6 +304,9 @@ footer {
   margin-right: 0.3333333333rem;
   fill: #fff;
 }
+.phone-number__icon-img_theme_green {
+  fill: #365a49;
+}
 .phone-number__text {
   white-space: nowrap;
 }
@@ -788,8 +791,13 @@ footer {
   border-color: #dee2bd;
 }
 .form__input_textarea {
-  height: 5rem;
+  height: 10rem;
   resize: none;
+}
+@media screen and (max-width: 768px) {
+  .form__input_textarea {
+    height: 4.4444444444rem;
+  }
 }
 .form__controls-wrapper {
   margin-bottom: 1.3888888889rem;
@@ -805,7 +813,11 @@ footer {
 }
 .form__btns {
   display: flex;
-  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .form__btns {
+    justify-content: center;
+  }
 }
 .form__btn:focus {
   outline: none;
@@ -824,7 +836,13 @@ footer {
   border-radius: 0;
 }
 .radio_checkbox .radio__visible:before {
-  background: url("../images/icons/tick.png") center center no-repeat;
+  width: 0.6111111111rem;
+  height: 0.5rem;
+  mask-image: url("../images/icons/checkmark.svg");
+  -webkit-mask-image: url("../images/icons/checkmark.svg");
+  background-color: #365a49;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
 }
 .radio__elem {
   display: none;

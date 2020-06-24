@@ -57,8 +57,12 @@
     }
 
     &_textarea {
-      height: rem(90px);
+      height: rem(180px);
       resize: none;
+      
+      @include tablets {
+        height: rem(80px);
+      }
     }
   }
 
@@ -76,8 +80,11 @@
   }
 
   &__btns {
-    display: flex;
-    justify-content: center;
+    display: flex;    
+
+    @include tablets {
+      justify-content: center;
+    }
   }
 
   &__btn {
