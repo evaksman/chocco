@@ -280,10 +280,13 @@ footer {
   font-size: 1.3333333333rem;
   line-height: 1.6666666667rem;
   text-transform: uppercase;
-  transition: text-shadow 0.3s;
+  transition: 0.3s;
 }
 .phone-number:hover {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.phone-number:hover .phone-number__icon-img {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 .phone-number_theme_green {
   color: #365a49;
@@ -298,10 +301,6 @@ footer {
   width: 0.6666666667rem;
   height: 0.6666666667rem;
   margin-right: 0.3333333333rem;
-  fill: #fff;
-}
-.phone-number__icon-img_theme_green {
-  fill: #365a49;
 }
 .phone-number__text {
   white-space: nowrap;
