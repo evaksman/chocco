@@ -2,13 +2,19 @@
   display: flex;
   
   &__icon {
-    min-width: 45px;
-    margin-right: 7px;
+    min-width: rem(40px);
+    margin-right: rem(7px);
+
+    &-img {
+      width: rem(44px);
+      height: rem(44px);
+      fill: #c6f7ff;
+    }
   }
 
   &__text {
-    font-size: 16px;
-    min-width: 65px;
-    line-height: 20px;
+    font-size: rem(16px);
+    min-width: rem(65px);
+    line-height: rem(20px);
   }
 }

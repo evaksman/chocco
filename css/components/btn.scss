@@ -1,12 +1,13 @@
 .btn {
-  font-size: 19px;
+  font-size: rem(19px);
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 22px 33px 19px 35px;
-  border-radius: 100px;
+  padding: rem(22px) rem(33px) rem(19px) rem(35px);
+  border-radius: 32px;
   line-height: 1;
   border: none;
+  cursor: pointer;
 
   &_theme_light {
     background-color: #fff;

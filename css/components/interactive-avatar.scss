@@ -1,11 +1,21 @@
 .interactive-avatar {
-  width: 80px;
-  height: 80px;
+  width: rem(80px);
+  height: rem(80px);
   border: 6px solid transparent;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
   transition: border-color .3s;
+
+  @include tablets {
+    width: rem(60px);
+    height: rem(60px);
+  }
+
+  @include phones {
+    width: rem(55px);
+    height: rem(55px);
+  }
 
   &:hover {
     border-color: $darkGreen;

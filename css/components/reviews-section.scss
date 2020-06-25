@@ -1,19 +1,28 @@
 .reviews-section {
   position: relative;
-  background: url("../../images/decor/granola-and-berries.png") right top 10% no-repeat;
+  background: url("../images/decor/granola-and-berries.png") right top 10% no-repeat;
+
+  @include tablets {
+    min-height: rem(975px);
+  }
+
+  @include phones {
+    // min-height: rem(800px);
+    height: fit-content;
+  }
 
   &:before {
-    content: url("../../images/decor/leftside-leaf.png");
+    content: url("../images/decor/leftside-leaf.png");
     position: absolute;
-    bottom: -130px;
+    bottom: rem(-130px);
     left: 0;
     z-index: $z-review-leaf; //потом убрать
   }
 
   &:after {
-    content: url("../../images/decor/multi-berries.png");
+    content: url("../images/decor/multi-berries.png");
     position: absolute;
-    bottom: -60px;
+    bottom: rem(-60px);
     left: 0;
     z-index: $z-review-berries; // потом убрать
   }

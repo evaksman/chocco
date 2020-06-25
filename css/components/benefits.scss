@@ -1,17 +1,35 @@
 .benefits {
   display: flex;
 
+  @include phones {
+    flex-direction: column;
+  }
+
   &__item {
     flex: 1;
     padding: 0 2%;
     position: relative;
 
+    @include phones {
+      padding: 0 2%;
+      margin-bottom: rem(40px);
+    }
+
     &:before {
-      content: url("../../images/decor/separator.png");
+      content: url("../images/decor/separator.png");
+      // content: "";
       position: absolute;
-      top: 50px;
+      top: rem(50px);
       right: 0;
       transform: translateX(50%);
+
+      @include tablets {
+        display: none;
+      }
+
+      // @media screen and (min-width: 768px) {
+      //   content: url("../images/decor/separator.png");
+      // }
     }
 
     &:first-child {

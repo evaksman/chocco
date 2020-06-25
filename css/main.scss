@@ -1,6 +1,10 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 $blue: #61c4d9;
 $darkGreen: #365a49;
@@ -11,6 +15,9 @@ $z-fixed-menu: 100;
 $z-review-leaf: 1;
 $z-review-berries: 2;
 
+// media
+@import "media";
+
 //normalize
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css");
 
@@ -18,7 +25,7 @@ $z-review-berries: 2;
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
 
 //base style
-@import "components/base";
+@import "base";
 
 //components
 @import "components/hero";
@@ -41,5 +48,9 @@ $z-review-berries: 2;
 @import "components/form";
 @import "components/radio";
 @import "components/map-section";
+@import "components/footer";
+@import "components/contacts";
+@import "components/socials";
 @import "components/fixed-menu";
+@import "components/hamburger";
 

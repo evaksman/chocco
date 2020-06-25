@@ -1,3 +1,15 @@
+html {
+  font-size: $baseFontSize;
+
+  @include tablets {
+    font-size: $baseFontSize - 1px;
+  }
+
+  @include phones {
+    font-size: $baseFontSize - 2px;
+  }
+}
+
 html, body {
   height: 100%;
 }
@@ -6,7 +18,6 @@ body {
   /* сглаживание */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: $baseFontSize;
   line-height: 1.42;
   font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
   font-weight: normal;
@@ -76,7 +87,7 @@ footer {
   position: relative;
   overflow: hidden; /*чтобы не было горизонтального скролла*/
   width: 100%;
-  min-width: $containerWidth + 20px;
+  // min-width: $containerWidth + 20px;
   min-height: 100%;
   // display: flex;
   // flex-direction: column;
@@ -87,7 +98,9 @@ footer {
 } */
 
 .container {
-  width: $containerWidth;
+  // width: $containerWidth;
+  width: 95%; // чтобы был небольшой отступ по краям, без необходимости задания паддинга
+  max-width: $containerWidth;
   margin: 0 auto;
   position: relative;
 }
