@@ -3,16 +3,31 @@
   justify-content: center;
   align-items: center;
 
+  @include tablets {
+    flex-direction: column;
+  }
+
   &__image-content {
     display: flex;
     align-items: center;
     width: 50%;
-    height: rem(424px);
+    max-height: rem(424px);
     margin-right: rem(40px);
+
+    @include tablets {
+      margin-right: 0;
+      width: 72%;
+      align-items: flex-end;
+    }
   }
 
   &__text-content {
     max-width: rem(350px);
+
+    @include tablets {
+      text-align: center;
+      max-width: rem(545px);
+    }
   }
 
   &__composition {
@@ -27,6 +42,10 @@
     margin-bottom: rem(30px);
     position: relative;
     color: #fff;
+
+    @include tablets {
+      display: none;
+    }
 
     &:hover {
       cursor: pointer;
@@ -73,6 +92,10 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include tablets {
+      align-items: center;
+    }
 
     &-text {
       margin-bottom: rem(30px);
