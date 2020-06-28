@@ -1020,14 +1020,17 @@ footer {
   position: absolute;
   bottom: -10rem;
   right: 0;
-  z-index: 1;
+}
+@media screen and (max-width: 480px) {
+  .slider-section:before {
+    bottom: -38%;
+  }
 }
 .slider-section:after {
-  content: url("../../images/decor/blueberries.png");
+  content: url("../images/decor/blueberries.png");
   position: absolute;
   bottom: -3.6111111111rem;
   right: 0;
-  z-index: 2;
 }
 
 .slider {
