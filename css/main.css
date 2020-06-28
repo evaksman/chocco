@@ -228,6 +228,11 @@ footer {
   justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
+  .header {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
   .header .phone-number.header__phone-number {
     display: none;
   }
@@ -1042,7 +1047,7 @@ footer {
 .overlay-menu__link {
   text-decoration: none;
   font-size: 2rem;
-  line-height: 2em;
+  line-height: 2;
   transition: text-shadow 0.3s;
 }
 .overlay-menu__link:hover {
