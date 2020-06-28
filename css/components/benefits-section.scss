@@ -23,6 +23,7 @@
     position: absolute;
     bottom: rem(-93px);
     left: 0;
+    z-index: 1;
 
     @include phones {
       display: none;
