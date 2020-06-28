@@ -522,6 +522,11 @@ footer {
   position: relative;
   background: url("../images/decor/side-leaf.png") left top 57% no-repeat;
 }
+@media screen and (max-width: 480px) {
+  .benefits-section {
+    background: none;
+  }
+}
 .benefits-section:before {
   content: url("../images/decor/bars-and-berries.png");
   position: absolute;
@@ -538,18 +543,6 @@ footer {
 .reviews-section {
   position: relative;
   background: url("../images/decor/granola-and-berries.png") right top 10% no-repeat;
-}
-@media screen and (max-width: 768px) {
-  .reviews-section {
-    min-height: 54.1666666667rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .reviews-section {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
 }
 .reviews-section:before {
   content: url("../images/decor/leftside-leaf.png");
