@@ -114,19 +114,6 @@ footer {
   position: relative;
 }
 @media screen and (max-width: 768px) {
-  .hero {
-    background-position: right top;
-    min-height: 55.6111111111rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-@media screen and (max-width: 768px) {
   .hero:before, .hero:after {
     display: none;
   }
@@ -389,6 +376,16 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .section {
+    min-height: 55.5555555556rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section {
+    min-height: 44.4444444444rem;
+  }
+}
 .section__title {
   color: #000;
   font-size: 2.6666666667rem;
@@ -520,20 +517,6 @@ footer {
 .benefits-section {
   position: relative;
   background: url("../images/decor/side-leaf.png") left top 57% no-repeat;
-}
-@media screen and (max-width: 768px) {
-  .benefits-section {
-    background-position: left top 5%;
-    min-height: 55.5555555556rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .benefits-section {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    background: none;
-  }
 }
 .benefits-section:before {
   content: url("../images/decor/bars-and-berries.png");
@@ -710,18 +693,6 @@ footer {
   color: #365a49;
 }
 @media screen and (max-width: 768px) {
-  .order-section {
-    min-height: 53.3333333333rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .order-section {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-@media screen and (max-width: 768px) {
   .order-section:before, .order-section:after {
     display: none;
   }
@@ -878,18 +849,6 @@ footer {
 .map-section {
   position: relative;
   background: url("../images/bg/map.png") center center/cover no-repeat;
-}
-@media screen and (max-width: 768px) {
-  .map-section {
-    min-height: 35.4444444444rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .map-section {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
 }
 
 .footer {

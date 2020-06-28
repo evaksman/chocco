@@ -4,14 +4,14 @@
   background-size: cover;
   color: $darkGreen;
 
-  @include tablets {
-    min-height: rem(960px);
-  }
+  // @include tablets {
+  //   min-height: rem(960px);
+  // }
 
-  @include phones {
-    // min-height: rem(768px);
-    height: fit-content;
-  }
+  // @include phones {
+  //   // min-height: rem(768px);
+  //   height: fit-content;
+  // }
 
   &:before, &:after {
     @include tablets {

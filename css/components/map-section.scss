@@ -2,13 +2,13 @@
   position: relative;
   background: url("../images/bg/map.png") center center / cover no-repeat;
 
-    @include tablets {
-      min-height: rem(638px);
-    }
+    // @include tablets {
+    //   min-height: rem(638px);
+    // }
   
-    @include phones {
-      // min-height: rem(631px);
-      height: fit-content;
-    }
+    // @include phones {
+    //   min-height: rem(631px);
+    //   // height: fit-content;
+    // }
 }
   
