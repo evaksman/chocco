@@ -1192,25 +1192,83 @@ footer {
   margin-bottom: 0;
 }
 
-.ingredient {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.8888888889rem;
-  line-height: 1.5;
+.team-section {
+  position: relative;
 }
-.ingredient__wrapper {
+.team-section:before {
+  content: url("../images/decor/single-raspberry.png");
+  position: absolute;
+  bottom: -8%;
+  left: 1%;
+}
+
+.teammates {
   display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .teammates {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.teammates__item {
+  margin-right: 1.1111111111rem;
+  width: 24%;
+}
+@media screen and (max-width: 768px) {
+  .teammates__item {
+    margin-right: 0;
+  }
+}
+.teammates__item:last-child {
+  margin-right: 0;
+}
+
+.teammate_active .teammate__name-icon {
+  transform: rotate(-180deg);
+}
+.teammate_active .teammate__info {
+  max-height: 100vh;
+}
+.teammate__photo {
+  width: 12.2222222222rem;
+  height: 16rem;
+  margin-bottom: 1.3888888889rem;
+}
+@media screen and (max-width: 768px) {
+  .teammate__photo {
+    display: none;
+  }
+}
+.teammate__accordion {
+  text-align: center;
+}
+.teammate__name {
+  color: #000;
+  font-size: 1.1666666667rem;
+  font-weight: bold;
+  margin-bottom: 0.8333333333rem;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.ingredient__icon {
-  width: 1.9444444444rem;
-  height: 1.9444444444rem;
-  margin-right: 1.1111111111rem;
+.teammate__name-icon {
+  width: 0.5rem;
+  height: 0.3888888889rem;
+  margin-left: 0.2777777778rem;
+  transition: transform 0.5s;
 }
-.ingredient__title {
-  font-weight: 500;
-  margin-right: 1.1111111111rem;
+.teammate__info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
 }
-.ingredient__amount {
-  font-weight: 400;
+.teammate__position {
+  color: #000;
+}
+.teammate__responsibilities {
+  font-weight: 300;
 }

@@ -254,4 +254,7 @@
       </g>
     </g>
   </symbol>
+  <symbol id="accordion-arrow" viewBox="0 0 9 6">
+    <path fill="currentColor" d="M4.506 6.14L.006.135h9.001z"/>
+  </symbol>
 </svg>

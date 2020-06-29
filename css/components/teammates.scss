@@ -1,0 +1,22 @@
+.teammates {
+  display: flex;
+  justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: rem(20px);
+    width: 24%;
+
+    @include tablets {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

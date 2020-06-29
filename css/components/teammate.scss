@@ -1,0 +1,59 @@
+.teammate {
+
+  &_active {
+    .teammate__name-icon {
+      transform: rotate(-180deg);
+    }
+
+    .teammate__info {
+      max-height: 100vh;
+    }
+  }
+
+  &__photo {
+    width: rem(220px);
+    height: rem(288px);
+    margin-bottom: rem(25px);
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &__accordion {
+    text-align: center;
+  }
+
+  &__name {
+    color: #000;
+    font-size: rem(21px);
+    font-weight: bold;
+    margin-bottom: rem(15px);
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-icon {
+      width: rem(9px);
+      height: rem(7px);
+      margin-left: rem(5px);
+      transition: transform .5s;
+    }
+  }
+
+  &__info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+  }
+
+  &__position {
+    color: #000;
+  }
+
+  &__responsibilities {
+    font-weight: 300;
+  }
+}
