@@ -6,15 +6,15 @@
   color: #fff;
   position: relative;
 
-  @include tablets {
-    background-position: right top;
-    min-height: rem(1001px);
-  }
+  // @include tablets {
+  //   background-position: right top;
+  //   min-height: rem(1001px);
+  // }
 
-  @include phones {
-    // min-height: rem(800px);
-    height: fit-content;
-  }
+  // @include phones {
+  //   // min-height: rem(800px);
+  //   height: fit-content;
+  // }
 
   &:before, &:after {
     @include tablets {

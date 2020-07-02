@@ -2,14 +2,14 @@
   position: relative;
   background: url("../images/decor/granola-and-berries.png") right top 10% no-repeat;
 
-  @include tablets {
-    min-height: rem(975px);
-  }
+  // @include tablets {
+  //   min-height: rem(975px);
+  // }
 
-  @include phones {
-    // min-height: rem(800px);
-    height: fit-content;
-  }
+  // @include phones {
+  //   // min-height: rem(800px);
+  //   height: fit-content;
+  // }
 
   &:before {
     content: url("../images/decor/leftside-leaf.png");

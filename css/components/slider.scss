@@ -1,0 +1,18 @@
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__arrow {
+    &_left {
+      .slider__arrow-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-icon {
+      width: rem(13px);
+      height: rem(28px);
+    }
+  }
+}

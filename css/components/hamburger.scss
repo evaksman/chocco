@@ -1,20 +1,11 @@
 .hamburger {
-  width: 24px;
-  height: 20px;  
-  // flex-direction: column;
-  // justify-content: space-between;
+  width: rem(24px);
+  height: rem(20px);  
   display: none;
 
   @include tablets {
     display: inline-flex;
   }
-
-  // &__plank {
-  //   display: block;
-  //   background: #fff;
-  //   height: 4px;
-  //   border-radius: 10px;
-  // }
 
   &__icon {
     fill: #fff;

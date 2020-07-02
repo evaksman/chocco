@@ -31,6 +31,13 @@
     }
   }
 
+  &_hover_dark {
+    &:hover {
+      background-color: #2e4e3f;
+      color: #fff;
+    }
+  }
+
   &_theme_transparent {
     background-color: transparent;
     color: #000;

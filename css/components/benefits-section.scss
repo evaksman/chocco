@@ -2,14 +2,15 @@
   position: relative;
   background: url("../images/decor/side-leaf.png") left top 57% no-repeat;
 
-  @include tablets {
-    background-position: left top 5%;
-    min-height: rem(1000px);
-  }
+
+  // @include tablets {
+  //   background-position: left top 5%;
+  //   min-height: rem(1000px);
+  // }
 
   @include phones {
     // min-height: rem(707px);
-    height: fit-content;
+    // height: fit-content;
     background: none;
   }
 
@@ -23,6 +24,7 @@
     position: absolute;
     bottom: rem(-93px);
     left: 0;
+    z-index: 1;
 
     @include phones {
       display: none;
