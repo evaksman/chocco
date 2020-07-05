@@ -563,7 +563,6 @@ footer {
   background: url("../images/decor/grey-berries.png") right top 5% no-repeat;
   background-color: #f8faf9;
   padding: 2.7777777778rem 9.8888888889rem 1.8888888889rem 2.5rem;
-  display: flex;
   margin-bottom: 0.8333333333rem;
   overflow: hidden;
   position: relative;
@@ -571,9 +570,6 @@ footer {
 @media screen and (max-width: 768px) {
   .reviews__display {
     padding: 2.7777777778rem 1.1111111111rem 1.8888888889rem;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
     margin-bottom: 1.7777777778rem;
   }
 }
@@ -588,6 +584,43 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   top: -3.6111111111rem;
+}
+.reviews__list {
+  position: relative;
+  min-height: 19.1666666667rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__list {
+    min-height: 23.1666666667rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__list {
+    min-height: 26.2777777778rem;
+  }
+}
+.reviews__item {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .reviews__item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+.reviews__item_active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
 }
 .reviews__avatar {
   width: 14.1111111111rem;
@@ -1214,11 +1247,15 @@ footer {
 }
 .teammates__item {
   margin-right: 1.1111111111rem;
-  width: 24%;
+  width: calc(100% / 4 - 20px);
+  min-height: 27rem;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .teammates__item {
     margin-right: 0;
+    min-height: 1.0555555556rem;
+    width: 13.8888888889rem;
   }
 }
 .teammates__item:last-child {
@@ -1232,8 +1269,6 @@ footer {
   max-height: 100vh;
 }
 .teammate__photo {
-  width: 12.2222222222rem;
-  height: 16rem;
   margin-bottom: 1.3888888889rem;
 }
 @media screen and (max-width: 768px) {
