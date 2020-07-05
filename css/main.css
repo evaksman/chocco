@@ -1235,49 +1235,79 @@ footer {
   left: 1%;
 }
 
-.teammates {
+.teammates_version_desktop {
   display: flex;
   justify-content: center;
 }
+.teammates_version_mobile {
+  display: none;
+}
 @media screen and (max-width: 768px) {
-  .teammates {
+  .teammates_version_desktop {
+    display: none;
+  }
+  .teammates_version_mobile {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 33.3333333333rem;
   }
 }
 .teammates__item {
   margin-right: 1.1111111111rem;
-  width: calc(100% / 4 - 20px);
+  max-width: calc(100% / 4 - 20px);
   min-height: 27rem;
   overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .teammates__item {
     margin-right: 0;
-    min-height: 1.0555555556rem;
-    width: 13.8888888889rem;
+    min-height: 1.1111111111rem;
+    max-width: 13.8888888889rem;
   }
 }
 .teammates__item:last-child {
   margin-right: 0;
 }
 
+.teammate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .teammate_active .teammate__name-icon {
   transform: rotate(-180deg);
 }
 .teammate_active .teammate__info {
   max-height: 100vh;
 }
+@media screen and (max-width: 768px) {
+  .teammate_active .teammate__info {
+    max-height: 22.7777777778rem;
+    margin-bottom: 1.1111111111rem;
+  }
+}
 .teammate__photo {
   margin-bottom: 1.3888888889rem;
 }
 @media screen and (max-width: 768px) {
   .teammate__photo {
-    display: none;
+    width: 12.4444444444rem;
+    height: 16.0555555556rem;
   }
 }
-.teammate__accordion {
-  text-align: center;
+@media screen and (max-width: 480px) {
+  .teammate__photo {
+    width: 7.8888888889rem;
+    height: 10.2222222222rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .teammate__photo-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 }
 .teammate__name {
   color: #000;
@@ -1285,21 +1315,28 @@ footer {
   font-weight: bold;
   margin-bottom: 0.8333333333rem;
   position: relative;
-  text-decoration: none;
   display: flex;
+  outline: none;
   justify-content: center;
   align-items: center;
+}
+.teammate__name:hover {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.teammate__name:hover .teammate__name-icon {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 .teammate__name-icon {
   width: 0.5rem;
   height: 0.3888888889rem;
   margin-left: 0.2777777778rem;
-  transition: transform 0.5s;
+  transition: transform 0.3s;
 }
 .teammate__info {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s;
+  text-align: center;
+  transition: max-height 0.3s;
 }
 .teammate__position {
   color: #000;

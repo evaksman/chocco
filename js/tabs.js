@@ -10,7 +10,7 @@ $(".interactive-avatar__link").on('click', e => {
   const currentTab = $(e.currentTarget);
   const target = currentTab.attr("data-open");
   const itemToShow = findBlockByDataAttr(target);
-  console.log(itemToShow);
+  // console.log(itemToShow);
   const currentItem = currentTab.closest(".interactive-avatar");
   // console.log(currentTab, currentItem);
 
