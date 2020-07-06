@@ -22,7 +22,7 @@
   }
 
   &__text-content {
-    max-width: rem(350px);
+    max-width: rem(360px);
 
     @include tablets {
       text-align: center;
@@ -37,7 +37,7 @@
     justify-content: center;
     width: rem(90px);
     height: rem(90px);
-    background: #60aacc;
+    background: #86c3d7;    
     border-radius: 5px;
     margin-bottom: rem(30px);
     position: relative;
@@ -49,6 +49,7 @@
 
     &:hover {
       cursor: pointer;
+      background: #60aacc;
 
       .bar__dropdown {
         top: 0;
