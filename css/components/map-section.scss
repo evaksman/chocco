@@ -1,6 +1,6 @@
 .map-section {
   position: relative;
-  background: url("../images/bg/map.png") center center / cover no-repeat;
+  // background: url("../images/bg/map.png") center center / cover no-repeat;
 
     // @include tablets {
     //   min-height: rem(638px);
@@ -12,3 +12,7 @@
     // }
 }
   
+#map {
+  width: 100%;
+  height: 100%;
+}
