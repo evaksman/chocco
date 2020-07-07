@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
-  <title>CHOCCO - Главная</title>
+  <title>CHOCCO</title>
 </head>
 
 <body>
@@ -609,39 +610,40 @@
         <div class="container">
           <h2 class="section__title section__title_color_darkgreen section__title_mb_medium">Закажите доставку</h2>
           <form class="form">
+            <input type=hidden name="to" value="somewhere@mail.com">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__title">Имя</span>
-                  <input type="text" class="form__input">
+                  <input type="text" name="name" class="form__input">
                 </label>
                 <label class="form__block">
                   <span class="form__title">Телефон</span>
-                  <input type="text" class="form__input">
+                  <input type="text" name="phone" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__title">Улица</span>
-                  <input type="text" class="form__input">
+                  <input type="text" name="street" class="form__input">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__title">Дом</span>
-                  <input type="text" class="form__input">
+                  <input type="text" name="home" class="form__input">
                 </label>
                 <label class="form__block">
                   <span class="form__title">Корпус</span>
-                  <input type="text" class="form__input">
+                  <input type="text" name="part" class="form__input">
                 </label>
                 <label class="form__block">
                   <span class="form__title">Квартира</span>
-                  <input type="text" class="form__input">
+                  <input type="text" name="flat" class="form__input">
                 </label>
                 <label class="form__block">
                   <span class="form__title">Этаж</span>
-                  <input type="text" class="form__input">
+                  <input type="text" name="floor" class="form__input">
                 </label>
               </div>
             </div>
@@ -649,7 +651,7 @@
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__title">Комментарий</span>
-                  <textarea class="form__input form__input_textarea"></textarea>
+                  <textarea name="comment" class="form__input form__input_textarea"></textarea>
                 </label>
               </div>
               <div class="form__controls-wrapper">
@@ -777,12 +779,25 @@
       <li class="fixed-menu__item"><a href="" class="fixed-menu__link"></a></li>
     </ul>
   </nav>
+  <div class="modal fancybox-content" id="modal">
+    <div class="modal__container">
+      <div class="modal__content">
+        Сообщение отправлено
+      </div>
+      <div class="modal__button-container">
+        <a href="#" class="btn btn_theme_dark app-submit-btn">Закрыть</a>
+      </div>
+
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="./js/modal-menu.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/accordion.js"></script>
   <script src="./js/tabs.js"></script>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
