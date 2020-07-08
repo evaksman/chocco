@@ -1,0 +1,86 @@
+.teammate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_active {
+    .teammate__name-icon {
+      transform: rotate(-180deg);
+    }
+
+    .teammate__info {
+      max-height: 100vh;
+
+      @include tablets {
+        max-height: rem(410px);
+        margin-bottom: rem(20px);
+      }
+    }
+  }
+
+  &__photo {
+    // width: rem(220px);
+    // height: rem(288px);
+    margin-bottom: rem(25px);
+
+    @include tablets {
+      width: rem(224px);
+      height: rem(289px);
+    }
+
+    @include phones {
+      width: rem(142px);
+      height: rem(184px);
+    }
+
+    &-img {
+      @include tablets {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__name {
+    color: #000;
+    font-size: rem(21px);
+    font-weight: bold;
+    margin-bottom: rem(15px);
+    position: relative;
+    display: flex;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+      .teammate__name-icon {
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+      }
+    }
+
+    &-icon {
+      width: rem(9px);
+      height: rem(7px);
+      margin-left: rem(5px);
+      transition: transform .3s;
+    }
+  }
+
+  &__info {
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: max-height .3s;
+  }
+
+  &__position {
+    color: #000;
+  }
+
+  &__responsibilities {
+    font-weight: 300;
+  }
+}

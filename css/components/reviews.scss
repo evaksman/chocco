@@ -3,18 +3,15 @@
     background: url("../images/decor/grey-berries.png") right top 5% no-repeat;
     background-color: #f8faf9;
     padding: rem(50px) rem(178px) rem(34px) rem(45px);
-    display: flex;
     margin-bottom: rem(15px);
     overflow: hidden;
     position: relative;
 
     @include tablets {
       padding: rem(50px) rem(20px) rem(34px);
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
       margin-bottom: rem(32px);
     }
+
 
     &:before {
       content: "";
@@ -27,6 +24,43 @@
       left: 50%;
       transform: translateX(-50%);
       top: rem(-65px);
+    }
+  }
+
+  &__list {
+    position: relative;
+    min-height: rem(345px);
+
+    @include tablets {
+      min-height: rem(417px);;
+    }
+
+    @include phones {
+      min-height: rem(473px);
+    }
+  }
+
+  &__item {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    &_active {
+      position: static;
+      opacity: 1;
+      pointer-events: unset;
     }
   }
 

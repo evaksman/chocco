@@ -563,7 +563,6 @@ footer {
   background: url("../images/decor/grey-berries.png") right top 5% no-repeat;
   background-color: #f8faf9;
   padding: 2.7777777778rem 9.8888888889rem 1.8888888889rem 2.5rem;
-  display: flex;
   margin-bottom: 0.8333333333rem;
   overflow: hidden;
   position: relative;
@@ -571,9 +570,6 @@ footer {
 @media screen and (max-width: 768px) {
   .reviews__display {
     padding: 2.7777777778rem 1.1111111111rem 1.8888888889rem;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
     margin-bottom: 1.7777777778rem;
   }
 }
@@ -588,6 +584,43 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   top: -3.6111111111rem;
+}
+.reviews__list {
+  position: relative;
+  min-height: 19.1666666667rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__list {
+    min-height: 23.1666666667rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__list {
+    min-height: 26.2777777778rem;
+  }
+}
+.reviews__item {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .reviews__item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+.reviews__item_active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
 }
 .reviews__avatar {
   width: 14.1111111111rem;
@@ -795,6 +828,10 @@ footer {
 .form__btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px #dee2bd;
+}
+
+.input-error {
+  border-color: red;
 }
 
 .radio {
@@ -1045,6 +1082,27 @@ footer {
   width: 0.7222222222rem;
   height: 1.5555555556rem;
 }
+.slider__list {
+  position: relative;
+  min-height: 26.6666666667rem;
+}
+.slider__item {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  flex: 0 0 auto;
+}
+.slider__item_active {
+  position: static;
+  opacity: 1;
+  pointer-events: unset;
+}
 
 .bar {
   display: flex;
@@ -1071,7 +1129,7 @@ footer {
   }
 }
 .bar__text-content {
-  max-width: 19.4444444444rem;
+  max-width: 20rem;
 }
 @media screen and (max-width: 768px) {
   .bar__text-content {
@@ -1086,7 +1144,7 @@ footer {
   justify-content: center;
   width: 5rem;
   height: 5rem;
-  background: #60aacc;
+  background: #86c3d7;
   border-radius: 5px;
   margin-bottom: 1.6666666667rem;
   position: relative;
@@ -1099,6 +1157,7 @@ footer {
 }
 .bar__composition:hover {
   cursor: pointer;
+  background: #60aacc;
 }
 .bar__composition:hover .bar__dropdown {
   top: 0;
@@ -1213,4 +1272,142 @@ footer {
 }
 .ingredient__amount {
   font-weight: 400;
+}
+
+.team-section {
+  position: relative;
+}
+.team-section:before {
+  content: url("../images/decor/single-raspberry.png");
+  position: absolute;
+  bottom: -8%;
+  left: 1%;
+}
+
+.teammates_version_desktop {
+  display: flex;
+  justify-content: center;
+}
+.teammates_version_mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .teammates_version_desktop {
+    display: none;
+  }
+  .teammates_version_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 33.3333333333rem;
+  }
+}
+.teammates__item {
+  margin-right: 1.1111111111rem;
+  max-width: calc(100% / 4 - 20px);
+  min-height: 27rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .teammates__item {
+    margin-right: 0;
+    min-height: 1.1111111111rem;
+    max-width: 13.8888888889rem;
+  }
+}
+.teammates__item:last-child {
+  margin-right: 0;
+}
+
+.teammate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.teammate_active .teammate__name-icon {
+  transform: rotate(-180deg);
+}
+.teammate_active .teammate__info {
+  max-height: 100vh;
+}
+@media screen and (max-width: 768px) {
+  .teammate_active .teammate__info {
+    max-height: 22.7777777778rem;
+    margin-bottom: 1.1111111111rem;
+  }
+}
+.teammate__photo {
+  margin-bottom: 1.3888888889rem;
+}
+@media screen and (max-width: 768px) {
+  .teammate__photo {
+    width: 12.4444444444rem;
+    height: 16.0555555556rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .teammate__photo {
+    width: 7.8888888889rem;
+    height: 10.2222222222rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .teammate__photo-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.teammate__name {
+  color: #000;
+  font-size: 1.1666666667rem;
+  font-weight: bold;
+  margin-bottom: 0.8333333333rem;
+  position: relative;
+  display: flex;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+}
+.teammate__name:hover {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.teammate__name:hover .teammate__name-icon {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+.teammate__name-icon {
+  width: 0.5rem;
+  height: 0.3888888889rem;
+  margin-left: 0.2777777778rem;
+  transition: transform 0.3s;
+}
+.teammate__info {
+  max-height: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: max-height 0.3s;
+}
+.teammate__position {
+  color: #000;
+}
+.teammate__responsibilities {
+  font-weight: 300;
+}
+
+.modal {
+  display: none;
+}
+.modal.error-modal .modal__content {
+  color: red;
+}
+.modal__container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal__content {
+  margin-bottom: 1.6666666667rem;
+  color: #000;
+  text-align: center;
 }

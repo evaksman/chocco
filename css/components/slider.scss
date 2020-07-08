@@ -15,4 +15,37 @@
       height: rem(28px);
     }
   }
+
+  &__list {
+    position: relative;
+    min-height: rem(480px);
+    // display: flex;
+    // overflow: hidden;
+    // will-change: right;
+    // transition: right 0.3s;
+    // width: 94%;
+  }
+
+  &__item {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    flex: 0 0 auto;
+
+    &_active {
+      position: static;
+      opacity: 1;
+      pointer-events: unset;
+    }
+  }
 }
