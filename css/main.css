@@ -1390,6 +1390,9 @@ footer {
   overflow: hidden;
   text-align: center;
   transition: max-height 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .teammate__position {
   color: #000;
@@ -1414,4 +1417,117 @@ footer {
   margin-bottom: 1.6666666667rem;
   color: #000;
   text-align: center;
+}
+
+.player-section__container {
+  width: 36.6666666667rem;
+  height: 22.5rem;
+  margin: 0 auto;
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.player.paused .player__start {
+  width: 0.8888888889rem;
+  height: 1.2222222222rem;
+  border: none;
+}
+.player.paused .player__start:after, .player.paused .player__start:before {
+  content: "";
+  display: block;
+  width: 0.2777777778rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #626262;
+}
+.player.paused .player__start:after {
+  right: 0;
+}
+.player.paused .player__start:before {
+  left: 0;
+}
+.player.paused .player__start-icon {
+  display: none;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background: url("../images/decor/splashscreen.jpg") center center/cover no-repeat;
+}
+.player__splash-icon {
+  width: 4.5555555556rem;
+  height: 6.5555555556rem;
+  opacity: 0.9;
+  fill: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.9444444444rem;
+  background: #404040;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.3888888889rem;
+}
+.player__start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0;
+  outline: none;
+}
+.player__start-icon {
+  width: 0.8888888889rem;
+  height: 1.2222222222rem;
+  fill: #626262;
+}
+.player__playback {
+  width: 24.6666666667rem;
+  height: 0.2222222222rem;
+  position: relative;
+  cursor: pointer;
+}
+.player__playback:before {
+  content: "";
+  height: 0.2222222222rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  background: #626262;
+  display: block;
+}
+.player__playback-button {
+  width: 0.7222222222rem;
+  height: 0.7222222222rem;
+  background: #626262;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.player__duration {
+  min-width: 5.5555555556rem;
 }
