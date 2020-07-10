@@ -1,8 +1,38 @@
 .player-section {
+  position: relative;
+
+  &:after {
+    content: url("../images/decor/blackberry.png");
+    position: absolute;
+    bottom: rem(-115px);
+    right: 0;
+    z-index: 1;
+
+    @include tablets {
+      content: url("../images/decor/blackberry-tablets.png");
+      bottom: rem(-72px);
+      right: 0;
+    }
+
+    @include phones {
+      content: url("../images/decor/blackberry-phones.png");
+    }
+  }
 
   &__container {
+    max-width: 95%;
     width: rem(660px);
-    height: rem(405px);
+    max-height: rem(405px);
     margin: 0 auto;
+
+    @include tablets {
+      width: rem(595px);
+      max-height: rem(362px);
+    }
+
+    @include phones {
+      width: rem(397px);
+      max-height: rem(245px);
+    }
   }
 }

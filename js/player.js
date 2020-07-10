@@ -74,15 +74,15 @@ let eventsInit = () => {
     const bar = $(e.currentTarget);
     // получим горизонтальную координату курсора в пикселах относительно слоя, в котором событие возникло
     const clickedPosition = e.originalEvent.layerX;
-    console.log(clickedPosition);
+    // console.log(clickedPosition);
     
     // найдем долю звука от 0 до 1
     const newVolumeValue = clickedPosition / bar.width();
-    console.log(newVolumeValue);
+    // console.log(newVolumeValue);
 
     // переведем в проценты
     const newButtonPositionPercent = 100 - newVolumeValue * 100;
-    console.log(newButtonPositionPercent);
+    // console.log(newButtonPositionPercent);
 
     $(".player__volume-button").css({
       right: `${newButtonPositionPercent}%`
