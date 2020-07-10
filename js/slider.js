@@ -26,7 +26,6 @@ const move = (items, slideIndexToMove, activeSlideIndex) => {
   slideToMove.addClass('slider__item_active').siblings().removeClass('slider__item_active');
 };
 
-
 $('.slider__arrow').on('click', e => {
   e.preventDefault();
   const $this = $(e.currentTarget);

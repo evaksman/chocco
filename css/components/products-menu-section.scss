@@ -1,0 +1,25 @@
+.products-menu-section {
+  position: relative;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/bg/menu.jpg") center center/cover no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  // z-index: 1;
+
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: rgba(0, 0, 0, 0.2);
+  //   z-index: -1;
+  // }
+
+  &__title {
+    padding-top: rem(99px);
+    padding-left: rem(79px);
+  }
+}

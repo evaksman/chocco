@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
   <title>CHOCCO</title>
 </head>
@@ -528,6 +529,89 @@
           </ul>
         </div>
       </section>
+      <section class="section products-menu-section">
+        <h2 class="section__title products-menu-section__title">Меню</h2>
+        <ul class="products-menu">
+          <li class="products-menu__item">
+            <a href="#" class="products-menu__title">
+              <img src="./images/bg/coco.png" alt="coco bg" class="products-menu__image">
+              <div class="products-menu__text">Батончики с молоком</div>
+            </a>
+            <div class="products-menu__content">
+              <div class="products-menu__container">
+                <button class="products-menu__close" type="button">
+                  <svg class="products-menu__close-icon">
+                    <use xlink:href="./images/icons/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="products-menu__content-text">
+                  <p>
+                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    полезнее.
+                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
+                    можно
+                    питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её
+                    будет
+                    спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="products-menu__item">
+            <a href="#" class="products-menu__title">
+              <img src="./images/bg/honey-fruits.png" alt="honey-fruits bg" class="products-menu__image">
+              <div class="products-menu__text">С мёдом и фруктами</div>
+            </a>
+            <div class="products-menu__content">
+              <div class="products-menu__container">
+                <button class="products-menu__close" type="button">
+                  <svg class="products-menu__close-icon">
+                    <use xlink:href="./images/icons/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="products-menu__content-text">
+                  <p>
+                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    полезнее.
+                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
+                    можно
+                    питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её
+                    будет
+                    спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="products-menu__item">
+            <a href="#" class="products-menu__title">
+              <img src="./images/bg/wildberries.png" alt="wildberries bg" class="products-menu__image">
+              <div class="products-menu__text">Дикие ягоды</div>
+            </a>
+            <div class="products-menu__content">
+              <div class="products-menu__container">
+                <button class="products-menu__close" type="button">
+                  <svg class="products-menu__close-icon">
+                    <use xlink:href="./images/icons/sprite.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="products-menu__content-text">
+                  <p>
+                    Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    полезнее.
+                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
+                    можно
+                    питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её
+                    будет
+                    спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
       <section class="section reviews-section">
         <div class="container">
           <h2 class="section__title section__title_mb_small">Отзывы</h2>
@@ -611,13 +695,15 @@
           <h2 class="section__title">Как мы работаем</h2>
           <div class="player-section__container">
             <div class="player">
-              <div class="player__wrapper"> <!--сам плеер-->
+              <div class="player__wrapper">
+                <!--сам плеер-->
                 <!-- <div id="yt-player" class="player__elem"></div> сюда вставим сам плеер с пом. api -->
                 <video id="html5-player" class="player__elem">
-                  <source src="./video/Iceland.mp4" src="" type="video/mp4"> <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
-                  <source src="./video/Iceland.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->                  
-                    <!--по-хорошему тут нужно подготовить видео в разных форматах для разных браузеров/платформ-->
-                    Your browser does not support HTML5 video.
+                  <source src="./video/Iceland.mp4" src="" type="video/mp4">
+                  <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+                  <source src="./video/Iceland.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
+                  <!--по-хорошему тут нужно подготовить видео в разных форматах для разных браузеров/платформ-->
+                  Your browser does not support HTML5 video.
                 </video>
                 <div class="player__splash">
                   <svg class="player__splash-icon">
@@ -625,7 +711,8 @@
                   </svg>
                 </div>
               </div>
-              <div class="player__controls"> <!--управляющие элементы-->
+              <div class="player__controls">
+                <!--управляющие элементы-->
                 <button class="player__start">
                   <svg class="player__start-icon">
                     <use xlink:href="./images/icons/sprite.svg#play"></use>
@@ -638,7 +725,7 @@
                   <span class="player__duration-completed">0:00</span> :
                   <span class="player__duration-estimate">0:00</span>
                 </div> -->
-                
+
                 <div class="player__volume">
                   <svg class="player__volume-icon">
                     <use xlink:href="./images/icons/sprite.svg#volume"></use>
@@ -840,7 +927,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=07ce8f81-4778-4452-b6a8-b99ae4ad1522&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=07ce8f81-4778-4452-b6a8-b99ae4ad1522&lang=ru_RU"
+    type="text/javascript"></script>
   <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
   <script src="./js/modal-menu.js"></script>
   <script src="./js/slider.js"></script>
@@ -849,6 +937,7 @@
   <script src="./js/modal.js"></script>
   <script src="./js/map.js"></script>
   <script src="./js/player.js"></script>
+  <script src="./js/menu-acco.js"></script>
 </body>
 
 </html>
