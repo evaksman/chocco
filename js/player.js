@@ -1,21 +1,53 @@
-let player;
-const playerContainer = $('.player');
-
 // инициализация событий в плеере (запуск/пауза, перемотка)
 let eventsInit = () => {
+  let player = $("#html5-player");
+  const playerContainer = $('.player');
+
+  player.on("play", () => {
+    playerContainer.toggleClass("paused active");
+    let interval;
+
+    const durationSec = player[0].duration;
+    $(".player__duration-estimate").text(formatTime(durationSec));
+
+    if (typeof interval != "undefined") {
+      clearInterval(interval);
+    }
+
+    interval = setInterval(() => {
+      const completedSec = player[0].currentTime;
+      const completedPercent = completedSec / durationSec * 100;
+
+      $(".player__playback-button").css({
+        left: `${completedPercent}%`
+      });
+
+      $(".player__duration-completed").text(formatTime(completedSec));
+    }, 1000);
+  });
+
+  player.on("pause", () => {
+    playerContainer.toggleClass("paused active");
+  });
+
+  player.on("click", () => {
+    if (playerContainer.hasClass("paused"))
+      player[0].pause();
+  });
+
+  player.on("ended", () => {
+    playerContainer.removeClass("paused active");
+    player[0].pause();
+  });
+
   $(".player__start").on("click", e => {
     e.preventDefault();
 
-    // const btn = $(e.currentTarget);
-
-    // перенесем навешивание классов в одно место, в свитч, чтобы синхронизировать события
-    if (playerContainer.hasClass("paused")) {
-      // playerContainer.removeClass("paused");
-      player.pauseVideo();
-    } else {
-      // playerContainer.addClass("paused");
-      player.playVideo();
-    }
+    // перенесем навешивание классов в события play/pause 
+    if (playerContainer.hasClass("paused"))
+      player[0].pause();
+    else
+      player[0].play();
   });
 
   $(".player__playback").on("click", e => {
@@ -25,17 +57,38 @@ let eventsInit = () => {
     // переведем в проценты
     const newButtonPositionPercent = clickedPosition / bar.width() * 100;
     // найдем кол-во секунд, на которое нужно перемотать видео
-    const newPlaybackPositionSec = player.getDuration() / 100 * newButtonPositionPercent;
+    const newPlaybackPositionSec = player[0].duration / 100 * newButtonPositionPercent;
 
     $(".player__playback-button").css({
       left: `${newButtonPositionPercent}%`
     });
 
-    player.seekTo(newPlaybackPositionSec); // перемотка
+    player[0].currentTime = newPlaybackPositionSec; // перемотка
   });
 
   $(".player__splash").on("click", e => {
-    player.playVideo();
+    player[0].play();
+  });
+
+  $(".player__volume-bar").on("click", e => {
+    const bar = $(e.currentTarget);
+    // получим горизонтальную координату курсора в пикселах относительно слоя, в котором событие возникло
+    const clickedPosition = e.originalEvent.layerX;
+    console.log(clickedPosition);
+    
+    // найдем долю звука от 0 до 1
+    const newVolumeValue = clickedPosition / bar.width();
+    console.log(newVolumeValue);
+
+    // переведем в проценты
+    const newButtonPositionPercent = 100 - newVolumeValue * 100;
+    console.log(newButtonPositionPercent);
+
+    $(".player__volume-button").css({
+      right: `${newButtonPositionPercent}%`
+    });
+
+    player[0].volume = newVolumeValue;
   });
 };
 
@@ -53,71 +106,6 @@ const formatTime = timeSec => {
   return `${minutes} : ${seconds}`;
 };
 
-// будет выполняться по загрузке видео с периодичностью раз в секунду
-const onPlayerReady = () => {
-  let interval;
-
-  const durationSec = player.getDuration();
-  $(".player__duration-estimate").text(formatTime(durationSec));
-
-  if (typeof interval !== "undefined") {
-    clearInterval(interval);
-  }
-
-  interval = setInterval(() => {
-    const completedSec = player.getCurrentTime();
-    const completedPercent = completedSec / durationSec * 100;
-
-    $(".player__playback-button").css({
-      left: `${completedPercent}%`
-    });
-
-    $(".player__duration-completed").text(formatTime(completedSec));
-  }, 1000);
-};
-
-// свитч по состояниям плеера
-const onPlayerStateChange = event => {
-  /*
-   -1 (воспроизведение видео не начато)
-   0 (воспроизведение видео завершено)
-   1 (воспроизведение)
-   2 (пауза)
-   3 (буферизация)
-   5 (видео подают реплики).
- */
-  switch (event.data) {
-    case 1:
-      playerContainer.addClass("active");
-      playerContainer.addClass("paused");
-      break;
-    case 2:
-      playerContainer.removeClass("active");
-      playerContainer.removeClass("paused");
-      break;
-  }
-};
-
-// YouTube API
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("yt-player", {
-    height: '405',
-    width: '660',
-    videoId: 'lBJyaIR1mlw',
-    events: {
-      'onReady': onPlayerReady, // когда будет загружено видео
-      'onStateChange': onPlayerStateChange // изменение состояния плеера
-    },
-    playerVars: {
-      controls: 0,
-      disablekb: 1,
-      showinfo: 0,
-      rel: 0,
-      autoplay: 0,
-      modestbranding: 1
-    }
-  });
-}
-
-// вызов функции с обработчиками событий
+// вызов функций с обработчиками событий
 eventsInit();
+

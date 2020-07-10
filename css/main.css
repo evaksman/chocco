@@ -1457,6 +1457,10 @@ footer {
 .player.active .player__splash {
   display: none;
 }
+.player__elem {
+  height: 100%;
+  width: 100%;
+}
 .player__splash {
   position: absolute;
   top: 0;
@@ -1511,23 +1515,57 @@ footer {
   content: "";
   height: 0.2222222222rem;
   position: absolute;
+  background: #626262;
   top: 50%;
   left: 0;
   right: 0;
   transform: translateY(-50%);
-  background: #626262;
   display: block;
 }
 .player__playback-button {
   width: 0.7222222222rem;
   height: 0.7222222222rem;
-  background: #626262;
   border-radius: 50%;
   position: absolute;
+  background: #626262;
   top: 50%;
   left: 0;
   transform: translate(-50%, -50%);
 }
-.player__duration {
-  min-width: 5.5555555556rem;
+.player__volume {
+  display: flex;
+  align-items: center;
+}
+.player__volume-icon {
+  width: 1rem;
+  height: 1.2222222222rem;
+  fill: #626262;
+  margin-right: 1rem;
+}
+.player__volume-bar {
+  width: 3.2222222222rem;
+  height: 0.2222222222rem;
+  position: relative;
+  cursor: pointer;
+}
+.player__volume-bar:before {
+  content: "";
+  height: 0.2222222222rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: block;
+  background: #626262;
+}
+.player__volume-button {
+  width: 0.7222222222rem;
+  height: 0.7222222222rem;
+  border-radius: 50%;
+  position: absolute;
+  background: #626262;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
 }

@@ -612,7 +612,13 @@
           <div class="player-section__container">
             <div class="player">
               <div class="player__wrapper"> <!--сам плеер-->
-                <div id="yt-player" class="player__elem"></div> <!--сюда вставим сам плеер с пом. api-->
+                <!-- <div id="yt-player" class="player__elem"></div> сюда вставим сам плеер с пом. api -->
+                <video id="html5-player" class="player__elem">
+                  <source src="./video/Iceland.mp4" src="" type="video/mp4"> <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
+                  <source src="./video/Iceland.webm" type="video/webm"><!-- WebM/VP8 для Firefox4, Opera, и Chrome -->                  
+                    <!--по-хорошему тут нужно подготовить видео в разных форматах для разных браузеров/платформ-->
+                    Your browser does not support HTML5 video.
+                </video>
                 <div class="player__splash">
                   <svg class="player__splash-icon">
                     <use xlink:href="./images/icons/sprite.svg#play"></use>
@@ -628,9 +634,18 @@
                 <div class="player__playback">
                   <button class="player__playback-button"></button>
                 </div>
-                <div class="player__duration">
+                <!-- <div class="player__duration">
                   <span class="player__duration-completed">0:00</span> :
                   <span class="player__duration-estimate">0:00</span>
+                </div> -->
+                
+                <div class="player__volume">
+                  <svg class="player__volume-icon">
+                    <use xlink:href="./images/icons/sprite.svg#volume"></use>
+                  </svg>
+                  <div class="player__volume-bar">
+                    <button class="player__volume-button"></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -826,7 +841,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=07ce8f81-4778-4452-b6a8-b99ae4ad1522&lang=ru_RU" type="text/javascript"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
   <script src="./js/modal-menu.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/accordion.js"></script>
