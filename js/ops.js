@@ -26,7 +26,7 @@ const countSectionPosition = sectionEq => {
 const changeMenuThemeForSection = sectionEq => {
   const currentSection = sections.eq(sectionEq);
   const menuTheme = currentSection.attr("data-sidemenu-theme");
-  const activeClass = "fixed-menu_shadowed"
+  const activeClass = "fixed-menu_shadowed";
 
   if (menuTheme == "black")
     sideMenu.addClass(activeClass);
@@ -96,7 +96,7 @@ $(window).on("wheel", e => {
 $(window).on("keydown", e => {
   // исключим скролл при нахождении в полях ввода
   const tagName = e.target.tagName.toLowerCase();
-  const userTypingInInputs = tagName == "input" || tagName == "textarea"
+  const userTypingInInputs = tagName == "input" || tagName == "textarea";
 
   if (userTypingInInputs) return;
 
