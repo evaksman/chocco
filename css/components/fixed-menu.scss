@@ -8,6 +8,24 @@
     display: none;
   }
 
+  &_shadowed {
+    .fixed-menu__item_active {
+      .fixed-menu__link {
+        border-color: #000;
+      }
+    }
+
+    .fixed-menu__link {
+      &:hover {
+        border-color: #000;
+      }
+
+      &:before {
+        background-color: #000;
+      }
+    }
+  }
+
   &__item {
     margin-bottom: 5px;
 
@@ -26,6 +44,10 @@
     display: block;
     position: relative;
 
+    &:hover {
+      border-color: #fff;
+    }
+
     &:before {
       content: "";
       display: block;
@@ -36,7 +58,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 }
