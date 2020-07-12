@@ -111,7 +111,6 @@ footer {
 .hero {
   background: url("../images/decor/big-leaf.png") right bottom no-repeat;
   background-color: #61c4d9;
-  min-height: 36.1111111111rem;
   height: 100%;
   color: #fff;
   position: relative;
@@ -378,20 +377,9 @@ footer {
 
 .section {
   height: 100%;
-  min-height: 36.1111111111rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-@media screen and (max-width: 768px) {
-  .section {
-    min-height: 55.5555555556rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section {
-    min-height: 44.4444444444rem;
-  }
 }
 .section__title {
   color: #000;
