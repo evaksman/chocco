@@ -406,6 +406,7 @@ footer {
 .headline__title {
   margin-bottom: 0.7222222222rem;
   line-height: 1;
+  white-space: nowrap;
 }
 .headline__subtitle {
   padding: 0 26%;
