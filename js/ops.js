@@ -124,16 +124,16 @@ $("[data-scroll-to]").on("click", e => {
   performTransition(reqSection.index());
 });
 
-if (isMobile) {
-  //https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js
+if (isMobile != null) {
+  // https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js
   $("body").swipe({
     //Generic swipe handler for all directions
     swipe: function (event, direction) {
       const scroller = viewportScroller();
       let scrollDirection = "";
 
-      if (scrollDirection == "up") scrollDirection = "next";
-      if (scrollDirection == "down") scrollDirection = "prev";
+      if (direction == "up") scrollDirection = "next";
+      if (direction == "down") scrollDirection = "prev";
 
       scroller[scrollDirection]();
     }
