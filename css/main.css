@@ -540,14 +540,14 @@ footer {
   position: absolute;
   bottom: -7.2222222222rem;
   left: 0;
-  z-index: 1;
+  z-index: 0;
 }
 .reviews-section:after {
   content: url("../images/decor/multi-berries.png");
   position: absolute;
   bottom: -3.3333333333rem;
   left: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .reviews__display {
@@ -675,6 +675,7 @@ footer {
   overflow: hidden;
   position: relative;
   transition: border-color 0.3s;
+  z-index: 2;
 }
 @media screen and (max-width: 768px) {
   .interactive-avatar {
