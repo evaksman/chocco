@@ -1,3 +1,5 @@
+// import $ from "jquery";
+
 const validateFields = (form, fieldsArray) => {
   fieldsArray.forEach(field => {
     field.removeClass("input-error");

@@ -1,3 +1,5 @@
+// import $ from "jquery";
+
 // инициализация событий в плеере (запуск/пауза, перемотка)
 let eventsInit = () => {
   let player = $("#html5-player");

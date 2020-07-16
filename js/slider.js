@@ -19,6 +19,9 @@
 
 // $('.slider__arrow_left').on('click', e => loop("left", e));
 // $('.slider__arrow_right').on('click', e => loop("right", e));
+
+// import $ from "jquery";
+
 const move = (items, slideIndexToMove, activeSlideIndex) => {
   const slideToMove = $(items).eq(slideIndexToMove);
   activeSlide = $(items).eq(activeSlideIndex);

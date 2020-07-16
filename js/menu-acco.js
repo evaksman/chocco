@@ -1,3 +1,5 @@
+// import $ from "jquery";
+
 const calcWidth = item => {
   let reqItemWidth = 0;
 

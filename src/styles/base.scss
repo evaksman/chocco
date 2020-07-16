@@ -6,7 +6,7 @@ html {
   }
 
   @include phones {
-    font-size: $baseFontSize - 2px;
+    font-size: 4vmin;
   }
 }
 

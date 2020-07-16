@@ -1,3 +1,9 @@
+// import $ from "jquery";
+// const MobileDetect = require('mobile-detect');
+//   // mobileDetect = new MobileDetect(req.headers['user-agent']);
+// const touchswipe = require('touchswipe');
+
+
 const sections = $("section");
 const display = $(".maincontent");
 const sideMenu = $(".fixed-menu");
@@ -139,3 +145,4 @@ if (isMobile != null) {
     }
   });
 }
+

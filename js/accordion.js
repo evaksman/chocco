@@ -1,3 +1,5 @@
+// import $ from "jquery";
+
 $(".teammate__name").on("click", e => {
   const currentTeammate = $(e.currentTarget);
   const currentItem = currentTeammate.closest(".teammate");
