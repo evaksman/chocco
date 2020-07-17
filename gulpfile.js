@@ -165,8 +165,6 @@ task("default",
   )
 );
 
-task("build", () => {
-  series("clean",
-    parallel("copy:html", "copy:images", "copy:svg", "copy:video", "icons", "styles", "scripts")
-  )
-});
+task("build",
+  series("clean", parallel("copy:html", "copy:images", "copy:svg", "copy:video", "icons", "styles", "scripts"))
+);
