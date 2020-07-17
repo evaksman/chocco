@@ -18,6 +18,10 @@
 
   &_theme_green {
     color: $darkGreen;
+
+    .phone-number__icon-img {
+      fill: $darkGreen;
+    }
   }
 
   &_size_small {
@@ -31,7 +35,7 @@
       width: rem(12px);
       height: rem(12px);
       margin-right: rem(6px);
-      // fill: #fff;
+      fill: #fff;
     }
   }
 

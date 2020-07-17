@@ -6,6 +6,13 @@ const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
+const gcmq = require('gulp-group-css-media-queries');
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const svgo = require('gulp-svgo');
+const svgSprite = require('gulp-svg-sprite');
 
 sass.compiler = require('node-sass');
 
@@ -30,6 +37,29 @@ task("copy:html", () => {
     .pipe(reload({ stream: true }));
 });
 
+const images = [
+  "src/images/**/*.png",
+  "src/images/**/*.jpg"
+];
+
+task("copy:images", () => {
+  return src(images)
+    .pipe(dest('dist/images'))
+    .pipe(reload({ stream: true }));
+});
+
+task("copy:svg", () => {
+  return src("src/images/*.svg")
+    .pipe(dest('dist/images'))
+    .pipe(reload({ stream: true }));
+});
+
+task("copy:video", () => {
+  return src("src/video/*")
+    .pipe(dest('dist/video'))
+    .pipe(reload({ stream: true }));
+});
+
 const styles = [
   "node_modules/normalize.css/normalize.css",
   "src/styles/main.scss"
@@ -37,13 +67,58 @@ const styles = [
 
 task("styles", () => {
   return src(styles)
-    .pipe(concat("main.scss")) // склеили
+    .pipe(sourcemaps.init())
+    .pipe(concat("main.min.scss")) // склеили
     .pipe(sassGlob()) // импорт всех стилей сразу
     .pipe(sass().on('error', sass.logError)) // скомпилировали
     .pipe(autoprefixer({ // автопрефиксер для разных браузеров
       cascade: false
     }))
-    .pipe(dest('dist'));
+    // .pipe(gcmq())
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
+    .pipe(sourcemaps.write())
+    .pipe(dest('dist'))
+    .pipe(reload({ stream: true }));
+});
+
+const libs = [
+  "node_modules/jquery/dist/jquery.js",
+
+  "src/scripts/*.js"
+];
+
+task("scripts", () => {
+  return src(libs)
+    .pipe(sourcemaps.init())
+    .pipe(concat("main.min.js", { newLine: ";" })) // склеили
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(dest('dist'))
+    .pipe(reload({ stream: true }));
+});
+
+task("icons", () => {
+  return src("src/images/icons/*.svg")
+    .pipe(svgo({
+      plugins: [
+        {
+          removeAttrs: {
+            attrs: "(fill|stroke|style|width|height|data.*)"
+          }
+        }
+      ]
+    }))
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: "../sprite.svg"
+        }
+      }
+    }))
+    .pipe(dest("dist/images/"));
 });
 
 // Static server
@@ -60,4 +135,11 @@ task('server', () => {
 
 watch("./src/styles/**/*.scss", series("styles"));
 watch("./src/*.html", series("copy:html"));
-task("default", series("clean", "copy:html", "styles", "server"));
+watch(images, series("copy:images"));
+watch("./src/images/*.svg", series("copy:svg"));
+watch("./src/video/*", series("copy:video"));
+watch("./src/scripts/*.js", series("scripts"));
+watch("./src/images/icons/*.svg", series("icons"));
+
+
+task("default", series("clean", "copy:html", "copy:images", "copy:svg", "copy:video", "icons", "styles", "scripts", "server"));

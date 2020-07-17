@@ -12,8 +12,8 @@
       &:before {
         width: rem(11px);
         height: rem(9px);
-        mask-image: url("../images/icons/checkmark.svg");
-        -webkit-mask-image: url("../images/icons/checkmark.svg");
+        mask-image: url("./images/checkmark.svg");
+        -webkit-mask-image: url("./images/checkmark.svg");
         background-color: $darkGreen;
         mask-repeat: no-repeat;
         -webkit-mask-repeat: no-repeat;
