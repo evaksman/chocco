@@ -13,8 +13,11 @@ const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
+const gulpif = require('gulp-if');
 
-const {DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS} = require('./gulp.config')
+const env = process.env.NODE_ENV; // берем переменную окружения
+
+const { DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS } = require('./gulp.config')
 
 sass.compiler = require('node-sass');
 
@@ -72,16 +75,18 @@ task("styles", () => {
     ...STYLES_LIBS,
     `${SRC_PATH}/styles/main.scss`
   ])
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(env == "dev", sourcemaps.init()))
     .pipe(concat("main.min.scss")) // склеили
     .pipe(sassGlob()) // импорт всех стилей сразу
     .pipe(sass().on('error', sass.logError)) // скомпилировали
-    .pipe(autoprefixer({ // автопрефиксер для разных браузеров
-      cascade: false
-    }))
-    // .pipe(gcmq())
-    .pipe(cleanCSS({ compatibility: 'ie8' }))
-    .pipe(sourcemaps.write())
+    .pipe(gulpif(env == "dev",
+      autoprefixer({ // автопрефиксер для разных браузеров
+        cascade: false
+      })
+    ))
+    // .pipe(gulpif(env == "prod", gcmq()))
+    .pipe(gulpif(env == "prod", cleanCSS({ compatibility: 'ie8' })))
+    .pipe(gulpif(env == "dev", sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
@@ -97,13 +102,15 @@ task("scripts", () => {
     ...JS_LIBS,
     `${SRC_PATH}/scripts/*.js`
   ])
-    .pipe(sourcemaps.init())
+    .pipe(gulpif(env == "dev", sourcemaps.init()))
     .pipe(concat("main.min.js", { newLine: ";" })) // склеили
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
+    .pipe(gulpif(env == "prod",
+      babel({
+        presets: ['@babel/env']
+      })
+    ))
+    .pipe(gulpif(env == "prod", uglify()))
+    .pipe(gulpif(env == "dev", sourcemaps.write()))
     .pipe(dest(DIST_PATH))
     .pipe(reload({ stream: true }));
 });
@@ -141,13 +148,25 @@ task('server', () => {
   });
 });
 
-watch(`${SRC_PATH}/styles/**/*.scss`, series("styles"));
-watch(`${SRC_PATH}/*.html`, series("copy:html"));
-watch(images, series("copy:images"));
-watch(`${SRC_PATH}/images/*.svg`, series("copy:svg"));
-watch(`${SRC_PATH}/video/*`, series("copy:video"));
-watch(`${SRC_PATH}/scripts/*.js`, series("scripts"));
-watch(`${SRC_PATH}/images/icons/*.svg`, series("icons"));
+task("watch", () => {
+  watch(`${SRC_PATH}/styles/**/*.scss`, series("styles"));
+  watch(`${SRC_PATH}/*.html`, series("copy:html"));
+  watch(images, series("copy:images"));
+  watch(`${SRC_PATH}/images/*.svg`, series("copy:svg"));
+  watch(`${SRC_PATH}/video/*`, series("copy:video"));
+  watch(`${SRC_PATH}/scripts/*.js`, series("scripts"));
+  watch(`${SRC_PATH}/images/icons/*.svg`, series("icons"));
+});
 
+task("default",
+  series("clean",
+    parallel("copy:html", "copy:images", "copy:svg", "copy:video", "icons", "styles", "scripts"),
+    parallel("watch", "server")
+  )
+);
 
-task("default", series("clean", parallel("copy:html", "copy:images", "copy:svg", "copy:video", "icons", "styles", "scripts"), "server"));
+task("build", () => {
+  series("clean",
+    parallel("copy:html", "copy:images", "copy:svg", "copy:video", "icons", "styles", "scripts")
+  )
+});
