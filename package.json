@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "fancybox": "^3.0.1",
     "jquery": "^3.5.1",
+    "jquery-touchswipe": "^1.6.19",
     "mobile-detect": "^1.4.4",
     "normalize.css": "^8.0.1",
     "touchswipe": "^1.6.0"
