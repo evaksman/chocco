@@ -1,0 +1,102 @@
+.form {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 18%;
+  }
+
+  @include phones {
+    padding: 0;
+  }
+
+  &__col {
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include tablets {
+      margin-right: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: rem(15px);
+  }
+
+  &__block {
+    flex: 1;
+    margin-right: rem(20px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    border: 3px solid transparent;
+    padding: rem(18px) rem(11px);
+    color: #000;
+    font-family: "Open Sans";
+    // transition: border-color .3s;
+
+    @include tablets {
+      padding: rem(8px) rem(8px);
+      font-size: rem(14px);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #dee2bd;
+    }
+
+    &_textarea {
+      height: rem(180px);
+      resize: none;
+      
+      @include tablets {
+        height: rem(80px);
+      }
+    }
+  }
+
+  &__controls-wrapper {
+    margin-bottom: rem(25px);
+  }
+
+  &__controls {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include phones {
+      justify-content: center;
+    }
+  }
+
+  &__btns {
+    display: flex;    
+
+    @include tablets {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    // transition: box-shadow .3s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px #dee2bd;
+    }
+  }
+}
+
+.input-error {
+  border-color: red;
+}

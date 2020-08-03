@@ -1,0 +1,15 @@
+.team-section {
+  position: relative;
+
+  &:before {
+    content: url("../images/decor/single-raspberry.png");
+    position: absolute;
+    bottom: -8%;
+    left: 1%;
+    z-index: 2;
+
+    // @include phones {
+    //   bottom: -38%;
+    // }
+  }
+}

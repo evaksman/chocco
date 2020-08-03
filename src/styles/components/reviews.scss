@@ -1,0 +1,129 @@
+.reviews {
+  &__display {
+    background: url("../images/decor/grey-berries.png") right top 5% no-repeat;
+    background-color: #f8faf9;
+    padding: rem(50px) rem(178px) rem(34px) rem(45px);
+    margin-bottom: rem(15px);
+    overflow: hidden;
+    position: relative;
+
+    @include tablets {
+      padding: rem(50px) rem(20px) rem(34px);
+      margin-bottom: rem(32px);
+    }
+
+
+    &:before {
+      content: "";
+      display: block;
+      width: rem(90px);
+      height: rem(90px);
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: rem(-65px);
+    }
+  }
+
+  &__list {
+    position: relative;
+    min-height: rem(345px);
+
+    @include tablets {
+      min-height: rem(417px);;
+    }
+
+    @include phones {
+      min-height: rem(473px);
+    }
+  }
+
+  &__item {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+
+    @include tablets {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    &_active {
+      position: static;
+      opacity: 1;
+      pointer-events: unset;
+    }
+  }
+
+  &__avatar {
+    width: rem(254px);
+    height: rem(260px);
+    margin-right: rem(20px);
+
+    @include tablets {
+      width: rem(130px);
+      height: rem(133px);
+      margin-right: 0;
+      margin-bottom: rem(28px);
+    }
+  }
+
+  &__avatar-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__title {
+    color: #000;
+    font-size: rem(30px);
+    font-weight: bold;
+    margin-bottom: rem(20px);
+  }
+
+  &__text {
+    margin-bottom: rem(25px);
+
+    p {
+      line-height: rem(22px);
+      margin-bottom: rem(20px);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__author {
+    color: #000;
+    font-weight: 500;
+  }
+
+  &__switcher {
+    display: flex;
+    justify-content: center;
+
+    @include tablets {
+      &-item {
+        margin-right: rem(25px);
+    
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

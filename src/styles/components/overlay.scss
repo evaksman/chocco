@@ -1,0 +1,53 @@
+.overlay {
+  display: none;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #333537;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+
+  &__close {
+    position: absolute;
+    right: rem(26px);
+    top: rem(32px);
+
+    &:hover {
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    }
+
+    &-icon {
+      fill: #fff;
+      opacity: 0.7;
+      width: rem(20px);
+      height: rem(20px);
+    }
+  }
+
+  &-menu {
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__link {
+      text-decoration: none;
+      font-size: rem(36px);
+      line-height: 2;
+      transition: text-shadow .3s;
+  
+      &:hover {    
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+

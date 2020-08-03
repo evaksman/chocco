@@ -1,0 +1,35 @@
+.order-section {
+  position: relative;
+  background: url("../images/bg/pattern.jpg") center center / cover no-repeat;
+  background-size: cover;
+  color: $darkGreen;
+
+  // @include tablets {
+  //   min-height: rem(960px);
+  // }
+
+  // @include phones {
+  //   // min-height: rem(768px);
+  //   height: fit-content;
+  // }
+
+  &:before, &:after {
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: url("../images/decor/single-berry.png");
+    position: absolute;
+    bottom: rem(90px);
+    left: 0;
+  }
+
+  &:after {
+    content: url("../images/decor/single-leaf.png");
+    position: absolute;
+    bottom: rem(90px);
+    right: 0;
+  }
+}

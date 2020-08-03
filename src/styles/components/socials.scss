@@ -1,0 +1,48 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    margin-right: rem(20px);
+    
+    &:last-child {
+      margin-right: 0;
+    }
+
+    // &_icon_vk .socials__link {
+    //   background: url("../images/icons/socials/vk.svg") center center no-repeat;
+    // }
+
+    // &_icon_fb .socials__link {
+    //   background: url("../images/icons/socials/fb.svg") center center no-repeat;
+    // }  
+    
+    // &_icon_insta .socials__link {
+    //   background: url("../images/icons/socials/in.svg") center center no-repeat;
+    // }
+  
+    // &_icon_tw .socials__link {
+    //   background: url("../images/icons/socials/tw.svg") center center no-repeat;
+    // }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    width: rem(20px);
+    height: rem(20px);
+    // position: relative;
+  }  
+
+  &__icon {
+    fill: #ccc;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+
+    &:hover {
+      fill: #000;
+    }
+  }
+}
